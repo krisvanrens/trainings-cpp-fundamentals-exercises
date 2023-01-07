@@ -16,6 +16,7 @@ See source code directory [here](code/module_01/).
 
 - **Exercise 1**: Classical mechanics ([link](https://www.godbolt.org/z/oYWr3v7j7))
 - **Exercise 2**: Intel x86 CPU registers ([link](https://www.godbolt.org/z/fvn4cWqdj))
+- **Exercise 3**: Progress bar ([link](https://www.godbolt.org/z/znK57PsMj))
 
 ## Module 02
 
