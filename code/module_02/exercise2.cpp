@@ -1,3 +1,5 @@
+// C++ Fundamentals: exercise mod02-ex2
+
 #include <iostream>
 #include <string>
 
@@ -12,4 +14,4 @@ int main() {
   std::cout << "Encoded result: " << text << '\n';
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/eT3Gr9KTP
+// Compiler Explorer: https://www.godbolt.org/z/EexWGshsn

@@ -1,3 +1,5 @@
+// C++ Fundamentals: exercise mod02-ex3
+
 #include <random>
 
 // Generates a pseudo-random boolean value to indicate if the state machine may advance.
@@ -14,4 +16,4 @@ int main() {
   // ...
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/sxa1b8PPe
+// Compiler Explorer: https://www.godbolt.org/z/e54xcf94d

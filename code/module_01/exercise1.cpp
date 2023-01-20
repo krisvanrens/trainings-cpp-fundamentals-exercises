@@ -1,3 +1,5 @@
+// C++ Fundamentals: exercise mod01-ex1
+
 #include <iostream>
 
 int main() {
@@ -7,4 +9,4 @@ int main() {
   std::cout << "Speed of the anvil at impact: ..." /* << ... */ << " Kilometers/hour\n";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/oYWr3v7j7
+// Compiler Explorer: https://www.godbolt.org/z/sKh7cna4v

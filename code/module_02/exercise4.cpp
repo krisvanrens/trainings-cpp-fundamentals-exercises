@@ -1,3 +1,5 @@
+// C++ Fundamentals: exercise mod02-ex4
+
 #include <random>
 #include <utility>
 
@@ -34,4 +36,4 @@ int main() {
   // Extra rule IV: If the first throw is [6, 3]/[3, 6], immediately go to position 26.
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/9a4j3783o
+// Compiler Explorer: https://www.godbolt.org/z/s9dPK9nYj

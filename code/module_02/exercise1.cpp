@@ -1,3 +1,5 @@
+// C++ Fundamentals: exercise mod02-ex1
+
 #include <iostream>
 
 int main() {
@@ -15,4 +17,4 @@ int main() {
   std::cout << "Number of bits set: " << result << '\n';
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/3435Kovh5
+// Compiler Explorer: https://www.godbolt.org/z/osEvaWe81
