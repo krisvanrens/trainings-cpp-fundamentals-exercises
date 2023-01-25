@@ -120,10 +120,11 @@ int main() {
     // Goal: make sure there is at least a warning if 'validate_v5' is called without
     //        handling the result value.
 
-    validate_v5(/* ... */);
+    const auto result = validate_v5(/* ... */); // OK.
+    validate_v5(/* ... */);                     // Warning/error.
 
     //std::cerr << "V5: Error message: " << /* ... */ << '\n';
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/q3x96ExzK
+// Compiler Explorer: https://www.godbolt.org/z/xoz3e31fa

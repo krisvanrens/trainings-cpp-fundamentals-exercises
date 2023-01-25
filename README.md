@@ -32,7 +32,7 @@ See source code directory [here](code/module_02/).
 See source code directory [here](code/module_03/).
 
 - **Exercise 1**: Classical mechanics revisited ([link](https://www.godbolt.org/z/djd94oqf7))
-- **Exercise 2**: Evolution of a function ([link](https://www.godbolt.org/z/q3x96ExzK))
+- **Exercise 2**: Evolution of a function ([link](https://www.godbolt.org/z/xoz3e31fa))
 - **Exercise 3**: State machine revisited
   - **3a**: [link](https://www.godbolt.org/z/czrdMz5h5)
   - **3b**: [link](https://www.godbolt.org/z/Wb7KxaWfr)
