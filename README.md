@@ -39,3 +39,20 @@ See source code directory [here](code/module_03/).
   - **3c**: [link](https://www.godbolt.org/z/9xjMjjT89)
   - **3d**: [link](https://www.godbolt.org/z/MME1vaqdx)
   - **3e**: [link](https://www.godbolt.org/z/bj15cP33z)
+
+## Module 04: Classes and inheritance
+
+See source code directory [here](code/module_04/).
+
+- **Exercise 1**: State machine revisited
+  - **1a**: [link](https://www.godbolt.org/z/3s8q4b1dW)
+  - **1b**: [link](https://www.godbolt.org/z/jKvMM5jaa)
+- **Exercise 2**: Relation consternation ([link](https://www.godbolt.org/z/jKvMM5jaa))
+- **Exercise 3**: Special member functions
+  - **3a**: [link](https://www.godbolt.org/z/66eefjGWz)
+  - **3b**: [link](https://www.godbolt.org/z/Y9ojvq4zs)
+  - **3c**: [link](https://www.godbolt.org/z/5hbnfb465)
+- **Exercise 4**: Copy-and-swap
+  - **4a**: [link](https://www.godbolt.org/z/1T6a4W9MY)
+  - **4b**: [link](https://www.godbolt.org/z/PPxdh7hxc)
+- **Exercise 5**: Life-cycle management ([link](https://www.godbolt.org/z/7WxWE3vaK))
