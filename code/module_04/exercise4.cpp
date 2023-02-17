@@ -1,13 +1,19 @@
-// C++ Fundamentals: exercise mod04-ex4b
+// C++ Fundamentals: exercise mod04-ex4
 
 #include <cassert>
 #include <iostream>
 #include <stdexcept>
 #include <utility>
 
-// Exercise: Implement the move constructor and move assignment operator such
+// Exercise: Imagine a class type 'CharDevice' that manages a system device as
+//            an internal resource. This class 'CharDevice' will "open" the re-
+//            source when 'init' is called on it, and will "close" it at des-
+//            truction time. A function called 'valid' can be used to test state.
+//
+//           Implement the copy constructor and copy assignment operator such
 //            that the code in 'main' builds and the assertions pass. Use the
-//            copy-and-swap idiom.
+//            copy-and-swap idiom. Note: use the 'clone' function to copy the
+//            device resource.
 
 // Helpers to fake a "system device" infrastructure.
 namespace System
@@ -19,24 +25,8 @@ struct Device {
 
   Device() = default;
 
-  Device(Device&& other) {
-    handle = other.handle;
-    offset = other.offset;
-    other.handle = -1;
-    other.offset = -1;
-  }
-
-  Device& operator=(Device&& other) {
-    if (&other == this) {
-      return *this;
-    }
-
-    handle = other.handle;
-    offset = other.offset;
-    other.handle = -1;
-    other.offset = -1;
-    return *this;
-  }
+  Device(Device&&)            = default;
+  Device& operator=(Device&&) = default;
 
   [[nodiscard]] Device clone() const {
     return *this;
@@ -83,17 +73,8 @@ public:
     }
   }
 
-  CharDevice(const CharDevice& other)
-    : device_{other.device_.clone()} {
-  }
-
-  CharDevice& operator=(CharDevice other) {
-    std::swap(device_, other.device_);
-    return *this;
-  }
-
-  // Move constructor..
-  // Move assignment operator..
+  // TODO: Copy constructor..
+  // TODO: Copy assignment operator..
 
   [[nodiscard]] bool valid() const {
     return is_device_open(device_);
@@ -129,22 +110,9 @@ int main() {
     assert(y.valid());
     assert(z.valid());
 
-    // Move construction:
-    CharDevice m1{std::move(x)};
-
-    assert(!x.valid());
-    assert(m1.valid());
-
-    // Copy assignment:
-    CharDevice m2;
-    m2 = std::move(y);
-
-    assert(!y.valid());
-    assert(m2.valid());
-
   } catch(const std::exception& error) {
     std::cerr << "Error: " << error.what() << '\n';
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/PPxdh7hxc
+// Compiler Explorer: https://www.godbolt.org/z/95josxa4n

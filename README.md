@@ -52,7 +52,5 @@ See source code directory [here](code/module_04/).
   - **3a**: [link](https://www.godbolt.org/z/66eefjGWz)
   - **3b**: [link](https://www.godbolt.org/z/Y9ojvq4zs)
   - **3c**: [link](https://www.godbolt.org/z/5hbnfb465)
-- **Exercise 4**: Copy-and-swap
-  - **4a**: [link](https://www.godbolt.org/z/1T6a4W9MY)
-  - **4b**: [link](https://www.godbolt.org/z/PPxdh7hxc)
+- **Exercise 4**: Copy-and-swap ([link](https://www.godbolt.org/z/95josxa4n))
 - **Exercise 5**: Life-cycle management ([link](https://www.godbolt.org/z/7WxWE3vaK))
