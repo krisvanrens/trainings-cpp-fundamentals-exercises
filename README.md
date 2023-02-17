@@ -54,3 +54,13 @@ See source code directory [here](code/module_04/).
   - **3c**: [link](https://www.godbolt.org/z/5hbnfb465)
 - **Exercise 4**: Copy-and-swap ([link](https://www.godbolt.org/z/95josxa4n))
 - **Exercise 5**: Life-cycle management ([link](https://www.godbolt.org/z/7WxWE3vaK))
+
+## Module 05: Memory
+
+See source code directory [here](code/module_05/).
+
+- **Exercise 1**: Move-and-swap ([link](https://www.godbolt.org/z/Pjb71sv53))
+- **Exercise 2**: Lookup table
+  - **2a**: [link](https://www.godbolt.org/z/MY6M9d9W8)
+  - **2b**: [link](https://www.godbolt.org/z/j7GbMPW97)
+  - **2c**: [link](https://www.godbolt.org/z/EM3TK8oEd)
