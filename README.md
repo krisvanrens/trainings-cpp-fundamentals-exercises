@@ -1,6 +1,6 @@
 # C++ fundamentals training exercises
 
-Exercise code and links for the "C++ Fundamentals" training.
+Exercise code and links for the ["C++ Fundamentals" training](https://www.hightechinstitute.nl/courses/c-fundamentals/).
 There's an exercise source file directory [here](code/), and links below to the same source file setups in the excellent online coding environment [Compiler Explorer](https://www.godbolt.org/).
 
 Feel free to contact me/create a PR if there are any mistakes or points of improvement!
