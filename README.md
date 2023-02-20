@@ -64,3 +64,12 @@ See source code directory [here](code/module_05/).
   - **2a**: [link](https://www.godbolt.org/z/MY6M9d9W8)
   - **2b**: [link](https://www.godbolt.org/z/j7GbMPW97)
   - **2c**: [link](https://www.godbolt.org/z/EM3TK8oEd)
+
+## Module 06: Error handling
+
+See source code directory [here](code/module_06/).
+
+- **Exercise 1**: Propagating errors
+  - **1a**: [link](https://www.godbolt.org/z/xG6orhssM)
+  - **1b**: [link](https://www.godbolt.org/z/z7nYnGY63)
+- **Exercise 2**: Class setup ([link](https://www.godbolt.org/z/4d6szfeWh))
