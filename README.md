@@ -73,3 +73,9 @@ See source code directory [here](code/module_06/).
   - **1a**: [link](https://www.godbolt.org/z/xG6orhssM)
   - **1b**: [link](https://www.godbolt.org/z/z7nYnGY63)
 - **Exercise 2**: Class setup ([link](https://www.godbolt.org/z/4d6szfeWh))
+
+## Module 07: Generic programming and templates
+
+See source code directory [here](code/module_07/).
+
+- **Exercise 1**: Rational number ([link](https://www.godbolt.org/z/qfbPYvxxq))
