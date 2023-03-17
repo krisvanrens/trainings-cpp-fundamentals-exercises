@@ -79,3 +79,17 @@ See source code directory [here](code/module_06/).
 See source code directory [here](code/module_07/).
 
 - **Exercise 1**: Rational number ([link](https://www.godbolt.org/z/qfbPYvxxq))
+
+## Module 08: The standard library
+
+See source code directory [here](code/module_08/).
+
+- **Exercise 1**: Classification `set` ordering ([link](https://www.godbolt.org/z/MW5xhEnP5))
+- **Exercise 2**: Iterating a `map` ([link](https://www.godbolt.org/z/94oGd376n))
+- **Exercise 3**: Generating random values ([link](https://www.godbolt.org/z/aKM49svsx))
+
+## Module 09: Algorithms and iterators
+
+See source code directory [here](code/module_09/).
+
+- **Exercise 1**: Event log processing ([link](https://www.godbolt.org/z/Y49c347xE))
