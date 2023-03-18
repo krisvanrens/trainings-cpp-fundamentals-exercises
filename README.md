@@ -93,3 +93,5 @@ See source code directory [here](code/module_08/).
 See source code directory [here](code/module_09/).
 
 - **Exercise 1**: Event log processing ([link](https://www.godbolt.org/z/Y49c347xE))
+- **Exercise 2**: Custom type iteration ([link](https://www.godbolt.org/z/6GThvY91T))
+
