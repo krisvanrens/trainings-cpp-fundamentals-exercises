@@ -95,3 +95,14 @@ See source code directory [here](code/module_09/).
 - **Exercise 1**: Event log processing ([link](https://www.godbolt.org/z/Y49c347xE))
 - **Exercise 2**: Custom type iteration ([link](https://www.godbolt.org/z/6GThvY91T))
 
+## Module 10: Working with strings
+
+See source code directory [here](code/module_10/).
+
+- **Exercise 1**: String validation ([link](https://www.godbolt.org/z/abjKr1YzG))
+
+## Module 11: Operators and operator overloading
+
+See source code directory [here](code/module_11/).
+
+- **Exercise 1**: Extending `Fraction` with operators ([link](https://www.godbolt.org/z/1xa5fc9qc))
