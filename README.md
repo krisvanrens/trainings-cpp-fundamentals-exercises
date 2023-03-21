@@ -39,6 +39,7 @@ See source code directory [here](code/module_03/).
   - **3c**: [link](https://www.godbolt.org/z/9xjMjjT89)
   - **3d**: [link](https://www.godbolt.org/z/MME1vaqdx)
   - **3e**: [link](https://www.godbolt.org/z/bj15cP33z)
+- **Exercise 4**: Currying ([link](https://www.godbolt.org/z/Yfdbev54h))
 
 ## Module 04: Classes and inheritance
 
