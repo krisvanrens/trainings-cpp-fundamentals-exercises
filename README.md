@@ -107,3 +107,6 @@ See source code directory [here](code/module_10/).
 See source code directory [here](code/module_11/).
 
 - **Exercise 1**: Extending `Fraction` with operators ([link](https://www.godbolt.org/z/1xa5fc9qc))
+- **Exercise 2**: Memoization
+  - **2a**: [link](https://www.godbolt.org/z/Wjv8v6E5P)
+  - **2b**: [link](https://www.godbolt.org/z/c6117E9P7)
