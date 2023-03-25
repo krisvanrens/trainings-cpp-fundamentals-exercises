@@ -80,6 +80,9 @@ See source code directory [here](code/module_06/).
 See source code directory [here](code/module_07/).
 
 - **Exercise 1**: Rational number ([link](https://www.godbolt.org/z/qfbPYvxxq))
+- **Exercise 2**: Custom type trait
+  - **2a**: [link](https://www.godbolt.org/z/nhTjWoeTf)
+  - **2b**: [link](https://www.godbolt.org/z/19T8ThGfb)
 
 ## Module 08: The standard library
 
