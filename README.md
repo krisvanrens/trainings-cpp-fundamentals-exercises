@@ -46,9 +46,9 @@ See source code directory [here](code/module_03/).
 See source code directory [here](code/module_04/).
 
 - **Exercise 1**: State machine revisited
-  - **1a**: [link](https://www.godbolt.org/z/3s8q4b1dW)
+  - **1a**: [link](https://www.godbolt.org/z/TnGqxhjrf)
   - **1b**: [link](https://www.godbolt.org/z/jKvMM5jaa)
-- **Exercise 2**: Relation consternation ([link](https://www.godbolt.org/z/jKvMM5jaa))
+- **Exercise 2**: Relation consternation ([link](https://www.godbolt.org/z/axPoa7n4M))
 - **Exercise 3**: Special member functions
   - **3a**: [link](https://www.godbolt.org/z/66eefjGWz)
   - **3b**: [link](https://www.godbolt.org/z/Y9ojvq4zs)

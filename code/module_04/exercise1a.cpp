@@ -27,7 +27,7 @@
 //
 //            class MyClass {
 //              void func();
-//              std::map<..enum_type.., std::function<void()> mymap = {
+//              std::map<..enum_type.., std::function<void()>> mymap = {
 //                {..enum_value.., std::bind_front(&MyClass::func, this)},
 //                {...}
 //              };
@@ -87,4 +87,4 @@ int main() {
   //StateMachine s; // Will run the state machine at construction.
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/3s8q4b1dW
+// Compiler Explorer: https://www.godbolt.org/z/TnGqxhjrf
