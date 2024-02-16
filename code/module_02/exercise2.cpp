@@ -14,4 +14,4 @@ int main() {
   std::cout << "Encoded result: " << text << '\n';
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/EexWGshsn
+// Compiler Explorer: https://www.godbolt.org/z/es6W8Kxhn

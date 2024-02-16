@@ -62,4 +62,4 @@ TEST_SUITE("Module 10 - Working with strings") {
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/abjKr1YzG
+// Compiler Explorer: https://www.godbolt.org/z/69fG91haz

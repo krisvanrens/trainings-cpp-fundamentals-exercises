@@ -42,5 +42,4 @@ int main() {
   //   56
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/6GThvY91T
-
+// Compiler Explorer: https://www.godbolt.org/z/14e61ozaa

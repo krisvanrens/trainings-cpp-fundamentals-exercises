@@ -35,4 +35,4 @@ int main() {
   api(17, 42, 56);
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/Yfdbev54h
+// Compiler Explorer: https://www.godbolt.org/z/8qWKEE6G6

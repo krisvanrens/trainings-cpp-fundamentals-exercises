@@ -1,7 +1,7 @@
 // C++ Fundamentals: exercise mod05-ex2b
 
 #include <cmath>
-#include <fmt/core.h>
+#include <format>
 #include <iostream>
 
 // Exercise: Improve the safety of the use of type 'Lut'. Legacy-style function
@@ -36,16 +36,16 @@ Lut* create_lut() {
 
 void visualize_lut(const Lut* const lut) {
   for (std::size_t index{0}; index < Lut::LUT_SIZE; ++index) {
-    std::cout << fmt::format("{}: {:#>{}}\n", index, ':', static_cast<unsigned int>(100.0f * lut->data[index]));
+    std::cout << std::format("{}: {:#>{}}\n", index, ':', static_cast<unsigned int>(100.0f * lut->data[index]));
   }
 }
 
 // TODO: Implement 'create_lut_safe'.
 
 int main() {
-  //auto lut = create_lut_safe();
+  // auto lut = create_lut_safe();
 
   // TODO: Visualize LUT.
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/j7GbMPW97
+// Compiler Explorer: https://www.godbolt.org/z/hbTezY4nK

@@ -16,8 +16,7 @@
 //            device resource.
 
 // Helpers to fake a "system device" infrastructure.
-namespace System
-{
+namespace System {
 
 struct Device {
   int handle{-1};
@@ -86,7 +85,6 @@ private:
 
 int main() {
   try {
-
     // Default construction:
     CharDevice x;
 
@@ -110,9 +108,9 @@ int main() {
     assert(y.valid());
     assert(z.valid());
 
-  } catch(const std::exception& error) {
+  } catch (const std::exception& error) {
     std::cerr << "Error: " << error.what() << '\n';
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/95josxa4n
+// Compiler Explorer: https://www.godbolt.org/z/GK61rExPc

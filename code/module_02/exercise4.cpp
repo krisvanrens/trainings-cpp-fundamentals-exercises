@@ -5,8 +5,8 @@
 
 // Generates a double dice throw value.
 [[nodiscard]] auto throw_dice() {
-  static std::random_device rd;
-  static std::mt19937 generator(rd());
+  static std::random_device              rd;
+  static std::mt19937                    generator(rd());
   static std::uniform_int_distribution<> dist(1, 6);
   return std::pair{dist(generator), dist(generator)};
 }
@@ -36,4 +36,4 @@ int main() {
   // Extra rule IV: If the first throw is [6, 3]/[3, 6], immediately go to position 26.
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/s9dPK9nYj
+// Compiler Explorer: https://www.godbolt.org/z/Y4GcPMecP

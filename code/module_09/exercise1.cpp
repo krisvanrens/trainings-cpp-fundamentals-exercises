@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include <source_location>
-#include <vector>
 #include <tuple>
+#include <vector>
 
 enum class EventType { Error, Info };
 
@@ -83,6 +83,7 @@ void process_D(const Events& events) {
 
 int main() {
   const Events event_log = {
+    // clang-format off
     {0, EventType::Info,  "motor1: start"},
     {1, EventType::Info,  "motor2: start"},
     {2, EventType::Info,  "motor1: OK"   },
@@ -93,6 +94,7 @@ int main() {
     {7, EventType::Error, "motor2: FAIL" },
     {8, EventType::Error, "sensor1: FAIL"},
     {9, EventType::Error, "motor2: FAIL" },
+    // clang-format on
     // ...
   };
 
@@ -102,4 +104,4 @@ int main() {
   process_D(event_log);
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/Y49c347xE
+// Compiler Explorer: https://www.godbolt.org/z/G94Tv4jdT

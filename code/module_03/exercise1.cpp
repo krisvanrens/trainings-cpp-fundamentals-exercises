@@ -30,11 +30,11 @@ int main() {
   const float drop_height_m{58.0f};
 
   std::cout << "Energy of the anvil at impact: "
-         /* << ... */
+            /* << ... */
             << " Watt-hour\n";
   std::cout << "Speed of the anvil at impact: "
-         /* << ... */
+            /* << ... */
             << " Kilometers/hour\n";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/djd94oqf7
+// Compiler Explorer: https://www.godbolt.org/z/nPhasraTc

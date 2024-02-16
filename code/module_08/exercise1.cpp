@@ -1,9 +1,9 @@
 // C++ Fundamentals: exercise mod08-ex1
 
 #include <iostream>
+#include <set>
 #include <string>
 #include <string_view>
-#include <set>
 
 // Consider this custom type 'Classification' and the associative set. Can you reason
 //  about how the ordering in the set is determined? Does it make sense with the output
@@ -51,4 +51,4 @@ int main() {
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/MW5xhEnP5
+// Compiler Explorer: https://www.godbolt.org/z/89Tf9KK5v

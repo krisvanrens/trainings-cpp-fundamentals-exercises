@@ -21,20 +21,22 @@
 //           Also, be sure to annotate the comments in the first lines of 'main'.
 
 struct Noisy {
+  // clang-format off
   Noisy()                        { LOG }     // Default constructor.
   ~Noisy()                       { LOG }     // Destructor.
   Noisy(const Noisy&)            { LOG }     // Copy constructor.
   Noisy& operator=(const Noisy&) { LOG RET } // Copy assignment operator.
   Noisy(Noisy&&)                 { LOG }     // Move constructor.
   Noisy& operator=(Noisy&&)      { LOG RET } // Move assignment operator.
+  // clang-format on
 };
 
 int main() {
-  //Derived d1{5};   // Calls ...
-  //Derived d2{d1};  // Calls ...
-  //Derived d3 = d2; // Calls ...
-  //Derived d4;      // Calls ...
-  //d4 = d2;         // Calls ...
+  // Derived d1{5};   // Calls ...
+  // Derived d2{d1};  // Calls ...
+  // Derived d3 = d2; // Calls ...
+  // Derived d4;      // Calls ...
+  // d4 = d2;         // Calls ...
 
   // The following assertions can be enabled to test the end result:
 #if 0
@@ -45,4 +47,4 @@ int main() {
 #endif
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/66eefjGWz
+// Compiler Explorer: https://www.godbolt.org/z/W55xPbGW3

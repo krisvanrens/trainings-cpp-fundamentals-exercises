@@ -1,7 +1,7 @@
 // C++ Fundamentals: exercise mod05-ex2c
 
 #include <cmath>
-#include <fmt/core.h>
+#include <format>
 #include <iostream>
 #include <memory>
 
@@ -38,7 +38,7 @@ Lut* create_lut() {
 
 void visualize_lut(const Lut* const lut) {
   for (std::size_t index{0}; index < Lut::LUT_SIZE; ++index) {
-    std::cout << fmt::format("{}: {:#>{}}\n", index, ':', static_cast<unsigned int>(100.0f * lut->data[index]));
+    std::cout << std::format("{}: {:#>{}}\n", index, ':', static_cast<unsigned int>(100.0f * lut->data[index]));
   }
 }
 
@@ -52,4 +52,4 @@ int main() {
   visualize_lut(lut.get());
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/EM3TK8oEd
+// Compiler Explorer: https://www.godbolt.org/z/ccfsP78oY

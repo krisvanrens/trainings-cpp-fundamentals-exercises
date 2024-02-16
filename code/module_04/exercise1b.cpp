@@ -7,8 +7,8 @@
 
 // Generates a pseudo-random boolean value to indicate if the state machine may advance.
 [[nodiscard]] bool advance() {
-  static std::random_device rd;
-  static std::mt19937 generator(rd());
+  static std::random_device              rd;
+  static std::mt19937                    generator(rd());
   static std::uniform_int_distribution<> dist(1, 2);
   return (dist(generator) == 2);
 }
@@ -24,7 +24,7 @@ class StateMachine {
 public:
   StateMachine() {
     while (state_now_ != State::Done) {
-      state_now_ = state_next_;
+      state_now_  = state_next_;
       state_next_ = state_machine(state_now_);
       dispatch_map.at(state_now_)();
     }
@@ -50,12 +50,13 @@ private:
   }
 
   State state_machine(State s) {
+    // clang-format off
     const std::map<State, State> next_state{
       {State::Idle,       State::Initialize},
-      {State::Initialize, State::Receive   },
-      {State::Receive,    State::Done      },
-      {State::Done,       State::Done      }
-    };
+      {State::Initialize, State::Receive},
+      {State::Receive,    State::Done},
+      {State::Done,       State::Done}};
+    // clang-format on
 
     if (advance()) {
       return next_state.at(s);
@@ -67,17 +68,18 @@ private:
   State state_now_{State::Idle};
   State state_next_{State::Idle};
 
+  // clang-format off
   const std::map<State, std::function<void()>> dispatch_map{
     {State::Idle,       std::bind_front(&StateMachine::state_idle_impl, this)},
     {State::Initialize, std::bind_front(&StateMachine::state_init_impl, this)},
     {State::Receive,    std::bind_front(&StateMachine::state_recv_impl, this)},
-    {State::Done,       std::bind_front(&StateMachine::state_done_impl, this)}
-  };
+    {State::Done,       std::bind_front(&StateMachine::state_done_impl, this)}};
+  // clang-format on
 };
 
 int main() {
-  //StateMachine s1{1};
-  //StateMachine s2{2};
+  // StateMachine s1{1};
+  // StateMachine s2{2};
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/jKvMM5jaa
+// Compiler Explorer: https://www.godbolt.org/z/TEGhsYqe9

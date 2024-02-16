@@ -63,4 +63,4 @@ bool Resource::destroy() {
   return !initialized_;
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/7WxWE3vaK
+// Compiler Explorer: https://www.godbolt.org/z/1dP5chKvM

@@ -2,7 +2,7 @@
 
 // Exercise: Implement error handling for the 'System' class type. Errors handling should
 //            cover construction/initialization and 'run' function calls. Also make sure
-//            once an error has occured, the internal state of a 'System' marked invalid,
+//            once an error has occurred, the internal state of a 'System' marked invalid,
 //            making subsequent calls fail.
 //
 //           You are free to use any error handling mechanism you see fit.
@@ -34,4 +34,4 @@ int main() {
   s.run();
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/4d6szfeWh
+// Compiler Explorer: https://www.godbolt.org/z/sqErKd4aT

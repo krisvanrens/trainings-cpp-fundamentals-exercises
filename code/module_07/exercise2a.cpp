@@ -7,14 +7,13 @@
 
 template<typename Type>
 struct A {};
- 
+
 template<typename Type>
 struct B {};
 
-template<typename Type>  // General case.
-struct is_typeA
-   : std::false_type {}; // Provides bool 'value'.
- 
+template<typename Type>               // General case.
+struct is_typeA : std::false_type {}; // Provides bool 'value'.
+
 // TODO: Positive case.
 
 int main() {
@@ -24,4 +23,4 @@ int main() {
   static_assert(/* Check: int      */); // FAIL
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/nhTjWoeTf
+// Compiler Explorer: https://www.godbolt.org/z/dd8q86zMr

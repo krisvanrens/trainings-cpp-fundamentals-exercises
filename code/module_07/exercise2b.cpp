@@ -7,13 +7,12 @@
 
 template<typename Type>
 struct A {};
- 
+
 template<typename Type>
 struct B {};
 
-template<typename Type>  // General case.
-struct is_typeA
-   : std::false_type {}; // Provides bool 'value'.
+template<typename Type>               // General case.
+struct is_typeA : std::false_type {}; // Provides bool 'value'.
 
 // TODO: Add the "positive case" from exercise 2a here..
 
@@ -26,4 +25,4 @@ int main() {
   static_assert(is_typeA_v<int>);      // FAIL
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/19T8ThGfb
+// Compiler Explorer: https://www.godbolt.org/z/cfGfdjzrh

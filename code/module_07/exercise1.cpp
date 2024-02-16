@@ -5,4 +5,4 @@
 int main() {
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/qfbPYvxxq
+// Compiler Explorer: https://www.godbolt.org/z/hh9GcYjfj

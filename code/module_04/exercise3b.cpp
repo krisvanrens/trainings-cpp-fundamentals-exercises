@@ -1,7 +1,7 @@
 // C++ Fundamentals: exercise mod04-ex3b
 
 #include <cassert>
-#include <fmt/core.h>
+#include <format>
 #include <iostream>
 
 // Macro definitions (text replacements) used in the 'Noisy' type.
@@ -14,12 +14,14 @@
 //            value is set correctly (validate using the assertions in 'main').
 
 struct Noisy {
+  // clang-format off
   Noisy()                        { LOG }     // Default constructor.
   ~Noisy()                       { LOG }     // Destructor.
   Noisy(const Noisy&)            { LOG }     // Copy constructor.
   Noisy& operator=(const Noisy&) { LOG RET } // Copy assignment operator.
   Noisy(Noisy&&)                 { LOG }     // Move constructor.
   Noisy& operator=(Noisy&&)      { LOG RET } // Move assignment operator.
+  // clang-format on
 };
 
 class Base {
@@ -33,7 +35,7 @@ public:
   }
 
   Base& operator=(const Base& other) {
-    id_       = other.id_ + 1;
+    id_ = other.id_ + 1;
     return *this;
   }
 
@@ -42,7 +44,7 @@ public:
   }
 
 private:
-  int  id_{-1};
+  int id_{-1};
 };
 
 class Derived : public Base {
@@ -63,9 +65,7 @@ int main() {
   Derived d4;      // Calls default constructor.
   d4 = d2;         // Calls copy assignment operator.
 
-  const auto print = [](const Derived& d) {
-    std::cout << fmt::format("Derived ID: {}\n", d.id());
-  };
+  const auto print = [](const Derived& d) { std::cout << std::format("Derived ID: {}\n", d.id()); };
 
   print(d1);
   print(d2);
@@ -85,4 +85,4 @@ int main() {
 #endif
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/Y9ojvq4zs
+// Compiler Explorer: https://www.godbolt.org/z/5Ynza4zeM

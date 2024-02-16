@@ -24,14 +24,15 @@
 // Type traits
 //
 
-namespace detail
-{
-  template<typename From, typename To, typename = void>
-  struct is_narrowing_conversion_impl : std::true_type {};
+namespace detail {
 
-  template<typename From, typename To>
-  struct is_narrowing_conversion_impl<From, To, std::void_t<decltype(To{std::declval<From>()})>> : std::false_type {};
-}  // namespace detail
+template<typename From, typename To, typename = void>
+struct is_narrowing_conversion_impl : std::true_type {};
+
+template<typename From, typename To>
+struct is_narrowing_conversion_impl<From, To, std::void_t<decltype(To{std::declval<From>()})>> : std::false_type {};
+
+} // namespace detail
 
 template<typename From, typename To>
 struct is_narrowing_conversion : detail::is_narrowing_conversion_impl<From, To> {};
@@ -43,6 +44,8 @@ inline constexpr bool is_narrowing_conversion_v = is_narrowing_conversion<From, 
 // Concepts
 //
 
+// clang-format off
+
 template<typename Type>
 concept nonbool_integral = std::integral<Type> && !std::same_as<bool, Type>;
 
@@ -51,6 +54,8 @@ concept safely_convertible_to = !is_narrowing_conversion_v<From, To>;
 
 template<typename Op, typename Arg>
 concept binary_op = std::invocable<Op, Arg, Arg>;
+
+// clang-format on
 
 //
 // Fraction
@@ -61,8 +66,8 @@ class Fraction final {
 public:
   template<safely_convertible_to<Type> Type_>
   Fraction(Type_ numerator, Type_ denominator)
-    : numerator_{numerator},
-      denominator_{denominator} {
+    : numerator_{numerator}
+    , denominator_{denominator} {
     if (denominator == 0) {
       throw std::invalid_argument("Denominator must be non-zero");
     }
@@ -72,8 +77,8 @@ public:
 
   template<safely_convertible_to<Type> Type_>
   explicit constexpr Fraction(Type_ numerator) noexcept
-    : numerator_{numerator},
-      denominator_{1} {
+    : numerator_{numerator}
+    , denominator_{1} {
   }
 
   constexpr Type numerator() const noexcept {
@@ -91,7 +96,7 @@ public:
 private:
   void simplify() noexcept {
     if (const auto gcd{std::gcd(numerator_, denominator_)}; gcd != 0) {
-      numerator_   /= gcd;
+      numerator_ /= gcd;
       denominator_ /= gcd;
     }
   }
@@ -121,4 +126,4 @@ int main() {
   assert(f1.denominator() == 7);
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/1xa5fc9qc
+// Compiler Explorer: https://www.godbolt.org/z/19xqWjGjs

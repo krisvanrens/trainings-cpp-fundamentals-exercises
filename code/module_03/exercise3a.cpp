@@ -5,8 +5,8 @@
 
 // Generates a pseudo-random boolean value to indicate if the state machine may advance.
 [[nodiscard]] bool advance() {
-  static std::random_device rd;
-  static std::mt19937 generator(rd());
+  static std::random_device              rd;
+  static std::mt19937                    generator(rd());
   static std::uniform_int_distribution<> dist(1, 2);
   return (dist(generator) == 2);
 }
@@ -49,4 +49,4 @@ int main() {
   std::cout << "Done\n";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/czrdMz5h5
+// Compiler Explorer: https://www.godbolt.org/z/5v5c4ncW3

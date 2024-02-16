@@ -1,6 +1,6 @@
 // C++ Fundamentals: exercise mod06-ex1b
 
-#include <fmt/core.h>
+#include <format>
 #include <iostream>
 #include <tl/expected.hpp>
 
@@ -45,8 +45,8 @@ private:
 class System {
 public:
   System()
-    : sensor1_{1},
-      sensor2_{2} {
+    : sensor1_{1}
+    , sensor2_{2} {
   }
 
   void execute() {
@@ -55,8 +55,7 @@ public:
   }
 
   void report() const {
-    std::cout << fmt::format("Sensor readings: [s1, s2] = [{}, {}]\n",
-                             sensor1_.value(), sensor2_.value());
+    std::cout << std::format("Sensor readings: [s1, s2] = [{}, {}]\n", sensor1_.value(), sensor2_.value());
   }
 
 private:
@@ -71,4 +70,4 @@ int main() {
   s.report();
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/z7nYnGY63
+// Compiler Explorer: https://www.godbolt.org/z/edcManKh1

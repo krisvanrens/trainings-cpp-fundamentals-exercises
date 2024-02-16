@@ -7,8 +7,8 @@
 
 // Generates a pseudo-random boolean value to indicate if the state machine may advance.
 [[nodiscard]] bool advance() {
-  static std::random_device rd;
-  static std::mt19937 generator(rd());
+  static std::random_device              rd;
+  static std::mt19937                    generator(rd());
   static std::uniform_int_distribution<> dist(1, 2);
   return (dist(generator) == 2);
 }
@@ -53,20 +53,22 @@ void state_done_impl() {
   std::cout << "Done\n";
 }
 
+// clang-format off
 const std::map<State, std::function<void()>> dispatch_map{
   {State::Idle,       &state_idle_impl},
   {State::Initialize, &state_init_impl},
   {State::Receive,    &state_recv_impl},
-  {State::Done,       &state_done_impl}
-};
+  {State::Done,       &state_done_impl}};
+// clang-format on
 
 State state_machine(State s) {
+  // clang-format off
   const std::map<State, State> next_state{
     {State::Idle,       State::Initialize},
-    {State::Initialize, State::Receive   },
-    {State::Receive,    State::Done      },
-    {State::Done,       State::Done      }
-  };
+    {State::Initialize, State::Receive},
+    {State::Receive,    State::Done},
+    {State::Done,       State::Done}};
+  // clang-format on
 
   if (advance()) {
     return next_state.at(s);
@@ -79,12 +81,12 @@ int main() {
   State s{State::Idle}, s_next{State::Idle};
 
   while (s != State::Done) {
-    s = s_next;
+    s      = s_next;
     s_next = state_machine(s);
     dispatch_map.at(s)();
   }
 
-  //StateMachine s; // Will run the state machine at construction.
+  // StateMachine s; // Will run the state machine at construction.
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/TnGqxhjrf
+// Compiler Explorer: https://www.godbolt.org/z/T59G7nTjz

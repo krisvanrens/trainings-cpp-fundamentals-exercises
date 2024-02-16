@@ -10,8 +10,7 @@
 //            copy-and-swap idiom.
 
 // Helpers to fake a "system device" infrastructure.
-namespace System
-{
+namespace System {
 
 struct Device {
   int handle{-1};
@@ -20,8 +19,8 @@ struct Device {
   Device() = default;
 
   Device(Device&& other) {
-    handle = other.handle;
-    offset = other.offset;
+    handle       = other.handle;
+    offset       = other.offset;
     other.handle = -1;
     other.offset = -1;
   }
@@ -31,8 +30,8 @@ struct Device {
       return *this;
     }
 
-    handle = other.handle;
-    offset = other.offset;
+    handle       = other.handle;
+    offset       = other.offset;
     other.handle = -1;
     other.offset = -1;
     return *this;
@@ -105,7 +104,6 @@ private:
 
 int main() {
   try {
-
     // Default construction:
     CharDevice x;
 
@@ -142,9 +140,9 @@ int main() {
     assert(!y.valid());
     assert(m2.valid());
 
-  } catch(const std::exception& error) {
+  } catch (const std::exception& error) {
     std::cerr << "Error: " << error.what() << '\n';
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/Pjb71sv53
+// Compiler Explorer: https://www.godbolt.org/z/aq7anGfM7

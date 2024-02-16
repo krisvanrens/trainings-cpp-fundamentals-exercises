@@ -3,7 +3,7 @@
 #include <iostream>
 
 int main() {
-  unsigned long value;
+  unsigned long value{};
 
   std::cout << "Please enter a positive integer value:\n";
   std::cin >> value;
@@ -17,4 +17,4 @@ int main() {
   std::cout << "Number of bits set: " << result << '\n';
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/osEvaWe81
+// Compiler Explorer: https://www.godbolt.org/z/rM9oKrrWr

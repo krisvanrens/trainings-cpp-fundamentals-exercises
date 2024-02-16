@@ -22,12 +22,16 @@ struct DataV3 {
 };
 
 namespace Inputs {
-  namespace v1 { const unsigned long data{7815349426721095}; }
-  namespace v2 { const DataV2 data{7815349426721095, 37311}; }
-  namespace v3 {       DataV3 data{7815349426721095, 37311}; }
-  namespace v4 { const DataV2 data{7815349426721095, 37311}; }
-  namespace v5 { const DataV2 data{7815349426721095, 37311}; }
-}
+
+// clang-format off
+namespace v1 { const unsigned long data{7815349426721095};        }
+namespace v2 { const DataV2        data{7815349426721095, 37311}; }
+namespace v3 {       DataV3        data{7815349426721095, 37311}; }
+namespace v4 { const DataV2        data{7815349426721095, 37311}; }
+namespace v5 { const DataV2        data{7815349426721095, 37311}; }
+// clang-format on
+
+} // namespace Inputs
 
 bool validate_v1(/* ... */) {
   return true;
@@ -91,7 +95,7 @@ int main() {
     validate_v3(/* ... */);
 
     // Uncomment the following assertion when working on v3:
-    //assert(data.validated);
+    // assert(data.validated);
   }
   {
     // Version 4:
@@ -108,7 +112,7 @@ int main() {
 
     validate_v4(/* ... */);
 
-    //std::cerr << "V4: Error message: " << /* ... */ << '\n';
+    // std::cerr << "V4: Error message: " << /* ... */ << '\n';
   }
   {
     // Version 5:
@@ -123,8 +127,8 @@ int main() {
     const auto result = validate_v5(/* ... */); // OK.
     validate_v5(/* ... */);                     // Warning/error.
 
-    //std::cerr << "V5: Error message: " << /* ... */ << '\n';
+    // std::cerr << "V5: Error message: " << /* ... */ << '\n';
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/xoz3e31fa
+// Compiler Explorer: https://www.godbolt.org/z/8Mr3afjG5

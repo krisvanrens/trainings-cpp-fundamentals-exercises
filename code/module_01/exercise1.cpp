@@ -9,4 +9,4 @@ int main() {
   std::cout << "Speed of the anvil at impact: ..." /* << ... */ << " Kilometers/hour\n";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/sKh7cna4v
+// Compiler Explorer: https://www.godbolt.org/z/PnazTcoYx

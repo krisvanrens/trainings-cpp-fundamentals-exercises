@@ -1,6 +1,6 @@
 // C++ Fundamentals: exercise mod06-ex1a
 
-#include <fmt/core.h>
+#include <format>
 #include <iostream>
 
 // Exercise: Consider a system setup with two sensors. In the current implementation,
@@ -47,8 +47,8 @@ private:
 class System {
 public:
   System()
-    : sensor1_{1},
-      sensor2_{2} {
+    : sensor1_{1}
+    , sensor2_{2} {
   }
 
   void execute() {
@@ -57,8 +57,7 @@ public:
   }
 
   void report() const {
-    std::cout << fmt::format("Sensor readings: [s1, s2] = [{}, {}]\n",
-                             sensor1_.value(), sensor2_.value());
+    std::cout << std::format("Sensor readings: [s1, s2] = [{}, {}]\n", sensor1_.value(), sensor2_.value());
   }
 
 private:
@@ -73,4 +72,4 @@ int main() {
   s.report();
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/xG6orhssM
+// Compiler Explorer: https://www.godbolt.org/z/6Mjq1PW5a

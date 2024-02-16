@@ -7,8 +7,8 @@
 
 // Generates a pseudo-random boolean value to indicate if the state machine may advance.
 [[nodiscard]] bool advance() {
-  static std::random_device rd;
-  static std::mt19937 generator(rd());
+  static std::random_device              rd;
+  static std::mt19937                    generator(rd());
   static std::uniform_int_distribution<> dist(1, 2);
   return (dist(generator) == 2);
 }
@@ -34,12 +34,13 @@ void state_done_impl() {
   std::cout << "Done\n";
 }
 
+// clang-format off
 const std::map<State, std::function<void()>> dispatch_map{
   {State::Idle,       &state_idle_impl},
   {State::Initialize, &state_init_impl},
   {State::Receive,    &state_recv_impl},
-  {State::Done,       &state_done_impl}
-};
+  {State::Done,       &state_done_impl}};
+// clang-format on
 
 State state_machine(State s) {
   switch (s) {
@@ -74,10 +75,10 @@ int main() {
   State s{State::Idle}, s_next{State::Idle};
 
   while (s != State::Done) {
-    s = s_next;
+    s      = s_next;
     s_next = state_machine(s);
     dispatch_map.at(s)();
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/bj15cP33z
+// Compiler Explorer: https://www.godbolt.org/z/7h9r1qWcc

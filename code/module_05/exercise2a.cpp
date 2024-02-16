@@ -1,7 +1,7 @@
 // C++ Fundamentals: exercise mod05-ex2a
 
 #include <cmath>
-#include <fmt/core.h>
+#include <format>
 #include <iostream>
 
 // Exercise: Study the code below. It implements a lookup table (LUT) type, generator and
@@ -35,7 +35,7 @@ Lut* create_lut() {
 
 void visualize_lut(const Lut* const lut) {
   for (std::size_t index{0}; index < Lut::LUT_SIZE; ++index) {
-    std::cout << fmt::format("{}: {:#>{}}\n", index, ':', static_cast<unsigned int>(100.0f * lut->data[index]));
+    std::cout << std::format("{}: {:#>{}}\n", index, ':', static_cast<unsigned int>(100.0f * lut->data[index]));
   }
 }
 
@@ -43,4 +43,4 @@ int main() {
   // TODO: Create LUT + visualize..
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/MY6M9d9W8
+// Compiler Explorer: https://www.godbolt.org/z/M9Kv8f8zx

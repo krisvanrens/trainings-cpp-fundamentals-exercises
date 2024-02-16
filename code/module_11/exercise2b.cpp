@@ -35,7 +35,8 @@ public:
 
   ~AutoTimer() {
     time_stop_ = Clock::now();
-    std::cout << "Elapsed time: " << std::chrono::duration_cast<std::chrono::milliseconds>(time_stop_ - time_start_).count() << " ms\n";
+    std::cout << "Elapsed time: "
+              << std::chrono::duration_cast<std::chrono::milliseconds>(time_stop_ - time_start_).count() << " ms\n";
   }
 };
 
@@ -47,17 +48,18 @@ public:
 //   2: *********
 //   3: ****
 //   4: *
-//   5: 
+//   5:
 //   ...
 //
 static InputValues generate_input_values() {
-  std::random_device device;
-  std::mt19937 engine{device()};
+  std::random_device         device;
+  std::mt19937               engine{device()};
   std::normal_distribution<> distribution(0, 2);
 
   InputValues result;
   std::generate_n(result.begin(), result.size(), [&]() -> InputValue {
-    return {std::abs(distribution(engine)), std::abs(distribution(engine))}; });
+    return {std::abs(distribution(engine)), std::abs(distribution(engine))};
+  });
 
   return result;
 }
@@ -65,11 +67,11 @@ static InputValues generate_input_values() {
 // TODO: Implement class 'Memoized'..
 
 static float func(int arg1, int arg2) {
-  const float result = static_cast<float>(arg1) / arg2;
+  const float result = static_cast<float>(arg1) / static_cast<float>(arg2);
 
   std::this_thread::sleep_for(std::chrono::milliseconds(10)); // Artificial delay.
 
-  //std::cout << __PRETTY_FUNCTION__ << ": (" << arg1 << ", " << arg2 << ") -> " << result << '\n';
+  // std::cout << __PRETTY_FUNCTION__ << ": (" << arg1 << ", " << arg2 << ") -> " << result << '\n';
 
   return result;
 }
@@ -77,19 +79,19 @@ static float func(int arg1, int arg2) {
 int main() {
   const auto values = generate_input_values();
 
-  const auto test = [&values](const auto &function, const std::string& name) {
+  const auto test = [&values](const auto& function, const std::string& name) {
     std::cout << "\n=== " << name << ":\n";
 
     AutoTimer t;
-    for (const auto &[x, y] : values) {
+    for (const auto& [x, y] : values) {
       function(x, y);
     }
   };
 
   const Memoized func_memoized{func};
 
-  test(func,          "Regular function");
+  test(func, "Regular function");
   test(func_memoized, "Memoized function");
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/c6117E9P7
+// Compiler Explorer: https://www.godbolt.org/z/1hPqoTW3z

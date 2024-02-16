@@ -1,6 +1,6 @@
 // C++ Fundamentals: exercise mod08-ex3
 
-#include <fmt/core.h>
+#include <format>
 #include <iostream>
 
 // Exercise: A) Set up a pseudo-random value distribution. The parameters are:
@@ -14,4 +14,4 @@
 int main() {
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/aKM49svsx
+// Compiler Explorer: https://www.godbolt.org/z/KKbGn3bKh
