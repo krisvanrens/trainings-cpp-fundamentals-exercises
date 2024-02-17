@@ -55,6 +55,7 @@ See source code directory [here](code/module_04/).
   - **3c**: [link](https://www.godbolt.org/z/WsjT6Tfna)
 - **Exercise 4**: Copy-and-swap ([link](https://www.godbolt.org/z/GK61rExPc))
 - **Exercise 5**: Life-cycle management ([link](https://www.godbolt.org/z/1dP5chKvM))
+- **Exercise 6**: Atrocious API ([link](https://www.godbolt.org/z/3YMvTW1b1))
 
 ## Module 05: Memory
 
