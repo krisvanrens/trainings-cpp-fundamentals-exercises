@@ -56,7 +56,7 @@ See source code directory [here](code/module_04/).
 - **Exercise 4**: Copy-and-swap ([link](https://www.godbolt.org/z/GK61rExPc))
 - **Exercise 5**: Life-cycle management ([link](https://www.godbolt.org/z/1dP5chKvM))
 - **Exercise 6**: Atrocious API ([link](https://www.godbolt.org/z/3YMvTW1b1))
-- **Exercise 7**: Wrapping mutex ([link](https://www.godbolt.org/z/W39foecP8))
+- **Exercise 7**: Wrapping mutex ([link](https://www.godbolt.org/z/hcc3ovWsj))
 
 ## Module 05: Memory
 
@@ -86,8 +86,8 @@ See source code directory [here](code/module_07/).
   - **2a**: [link](https://www.godbolt.org/z/dd8q86zMr)
   - **2b**: [link](https://www.godbolt.org/z/cfGfdjzrh)
 - **Exercise 3**: Generic wrapping mutex
-  - **3a**: [link](https://www.godbolt.org/z/c9hzxjxeY)
-  - **3b**: [link](https://www.godbolt.org/z/7rdY8GY4G)
+  - **3a**: [link](https://www.godbolt.org/z/19feG9f9r)
+  - **3b**: [link](https://www.godbolt.org/z/GvjEzPsrx)
 
 ## Module 08: The standard library
 

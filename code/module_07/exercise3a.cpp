@@ -5,12 +5,12 @@
 #include <string>
 #include <thread>
 
-// Exercise: Make the `safe_value` abstraction type-generic.
+// Exercise: Make the `Mutex` abstraction type-generic.
 
 namespace detail {
 
 /// Safe value ownership type.
-struct value_data {
+struct MutexData {
   unsigned int value{};
   std::mutex   mut;
 };
@@ -18,49 +18,44 @@ struct value_data {
 } // namespace detail
 
 /// Scoped-constrained safe value accessor.
-class value_guard {
+class MutexGuard {
 private:
-  detail::value_data& data_;
+  detail::MutexData& data_;
 
-  /// NOTE: Private constructor to prevent construction "in the wild".
-  value_guard(detail::value_data& data)
+  MutexGuard(detail::MutexData& data)
     : data_{data} {
-    // Lock value access as long as the guard lives.
     data_.mut.lock();
   }
 
-  friend class safe_value; // Allow `safe_value` to construct.
+  friend class Mutex; // Allow `Mutex` to construct.
 
 public:
-  ~value_guard() {
-    // Unlock value access, guarded lifetime ends here.
+  ~MutexGuard() {
     data_.mut.unlock();
   }
 
-  /// Immutable value accessor.
   const unsigned int& value() const {
     return data_.value;
   }
 
-  /// Mutable value accessor.
   unsigned int& value() {
     return data_.value;
   }
 };
 
 /// Safe value abstraction.
-class safe_value {
+class Mutex {
 private:
-  detail::value_data data_;
+  detail::MutexData data_;
 
 public:
-  value_guard lock() {
-    return value_guard(data_);
+  MutexGuard lock() {
+    return MutexGuard(data_);
   }
 };
 
 int main() {
-  safe_value<unsigned int> c;
+  Mutex<unsigned int> c;
 
   std::thread t1{[&] {
     for (unsigned int i = 0; i < 500'000; i++) {
@@ -84,16 +79,16 @@ int main() {
 
   std::cout << c.lock().value() << '\n'; // One million...for sure!
 
-  safe_value<int>   x1; // Signed integer.
-  safe_value<float> x2; // Single-precision floating-point.
+  Mutex<int>   x1; // Signed integer.
+  Mutex<float> x2; // Single-precision floating-point.
 
   struct Id {
     unsigned long id{};
     std::string   tag;
   };
 
-  safe_value<Id> x3; // Custom type.
+  Mutex<Id> x3; // Custom type.
   x3.lock().value().tag = "Covfefe";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/c9hzxjxeY
+// Compiler Explorer: https://www.godbolt.org/z/19feG9f9r

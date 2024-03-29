@@ -4,14 +4,15 @@
 #include <mutex>
 #include <thread>
 
-// Exercise: Implement the `safe_value` abstraction. Read the instructions in the slides.
+// Exercise: Implement the `Mutex` abstraction. Read the instructions in the slides.
 
 /// Safe value abstraction.
-class safe_value { /* ... */
+class Mutex {
+  // ...
 };
 
 int main() {
-  safe_value c;
+  Mutex c;
 
   std::thread t1{[&] {
     for (unsigned int i = 0; i < 500'000; i++) {
@@ -35,4 +36,4 @@ int main() {
   std::cout << c.lock().value() << '\n'; // One million...for sure!
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/W39foecP8
+// Compiler Explorer: https://www.godbolt.org/z/hcc3ovWsj

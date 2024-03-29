@@ -11,7 +11,7 @@ namespace detail {
 
 /// Safe value ownership type.
 template<typename T>
-struct value_data {
+struct MutexData {
   T          value{};
   std::mutex mut;
 };
@@ -20,35 +20,30 @@ struct value_data {
 
 // Forward-declataration used for the friend class specification.
 template<typename T>
-class safe_value;
+class Mutex;
 
 /// Scoped-constrained safe value accessor.
 template<typename T>
-class value_guard {
+class MutexGuard {
 private:
-  detail::value_data<T>& data_;
+  detail::MutexData<T>& data_;
 
-  /// NOTE: Private constructor to prevent construction "in the wild".
-  value_guard(detail::value_data<T>& data)
+  MutexGuard(detail::MutexData<T>& data)
     : data_{data} {
-    // Lock value access as long as the guard lives.
     data_.mut.lock();
   }
 
-  friend class safe_value<T>; // Allow `safe_value` to construct.
+  friend class Mutex<T>; // Allow `Mutex` to construct.
 
 public:
-  ~value_guard() {
-    // Unlock value access, guarded lifetime ends here.
+  ~MutexGuard() {
     data_.mut.unlock();
   }
 
-  /// Immutable value accessor.
   const T& value() const {
     return data_.value;
   }
 
-  /// Mutable value accessor.
   T& value() {
     return data_.value;
   }
@@ -56,18 +51,18 @@ public:
 
 /// Safe value abstraction.
 template<typename T>
-class safe_value {
+class Mutex {
 private:
-  detail::value_data<T> data_;
+  detail::MutexData<T> data_;
 
 public:
-  value_guard<T> lock() {
-    return value_guard(data_);
+  MutexGuard<T> lock() {
+    return MutexGuard(data_);
   }
 };
 
 int main() {
-  safe_value<unsigned int> c;
+  Mutex<unsigned int> c;
 
   std::thread t1{[&] {
     for (unsigned int i = 0; i < 500'000; i++) {
@@ -91,19 +86,19 @@ int main() {
 
   std::cout << c.lock().value() << '\n'; // One million...for sure!
 
-  safe_value x0{42u};   // Unsigned integer.
-  safe_value x1{42};    // Signed integer.
-  safe_value x2{3.14f}; // Single-precision floating-point.
+  Mutex x0{42u};   // Unsigned integer.
+  Mutex x1{42};    // Signed integer.
+  Mutex x2{3.14f}; // Single-precision floating-point.
 
   struct Id {
     unsigned long id{};
     std::string   tag;
   };
 
-  safe_value     x3{Id{.id = 123, .tag = "Radio"}}; // Move construction.
-  safe_value<Id> x4;                                // Default construction.
+  Mutex     x3{Id{.id = 123, .tag = "Radio"}}; // Move construction.
+  Mutex<Id> x4;                                // Default construction.
 
   x4.lock().value().tag = "Covfefe";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/7rdY8GY4G
+// Compiler Explorer: https://www.godbolt.org/z/GvjEzPsrx
