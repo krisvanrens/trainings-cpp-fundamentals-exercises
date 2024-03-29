@@ -1,7 +1,7 @@
 // C++ Fundamentals: exercise mod07-ex3a
 
-#include <mutex>
 #include <iostream>
+#include <mutex>
 #include <string>
 #include <thread>
 
@@ -15,15 +15,15 @@ struct value_data {
   std::mutex   mut;
 };
 
-} // namspace detail
+} // namespace detail
 
 /// Scoped-constrained safe value accessor.
 class value_guard {
 private:
-  detail::value_data &data_;
+  detail::value_data& data_;
 
   /// NOTE: Private constructor to prevent construction "in the wild".
-  value_guard(detail::value_data &data)
+  value_guard(detail::value_data& data)
     : data_{data} {
     // Lock value access as long as the guard lives.
     data_.mut.lock();
@@ -38,12 +38,12 @@ public:
   }
 
   /// Immutable value accessor.
-  const unsigned int &value() const {
+  const unsigned int& value() const {
     return data_.value;
   }
 
   /// Mutable value accessor.
-  unsigned int &value() {
+  unsigned int& value() {
     return data_.value;
   }
 };

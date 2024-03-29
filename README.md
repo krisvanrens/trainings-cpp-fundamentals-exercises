@@ -118,3 +118,4 @@ See source code directory [here](code/module_11/).
 - **Exercise 2**: Memoization
   - **2a**: [link](https://www.godbolt.org/z/3GaearjYY)
   - **2b**: [link](https://www.godbolt.org/z/1hPqoTW3z)
+- **Exercise 3**: Extending `Mutex` with operators ([link](https://www.godbolt.org/z/hvesKnTf4))

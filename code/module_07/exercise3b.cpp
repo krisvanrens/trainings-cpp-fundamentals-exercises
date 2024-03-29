@@ -1,7 +1,7 @@
 // C++ Fundamentals: exercise mod07-ex3b
 
-#include <mutex>
 #include <iostream>
+#include <mutex>
 #include <string>
 #include <thread>
 
@@ -16,7 +16,7 @@ struct value_data {
   std::mutex mut;
 };
 
-} // namspace detail
+} // namespace detail
 
 // Forward-declataration used for the friend class specification.
 template<typename T>
@@ -26,10 +26,10 @@ class safe_value;
 template<typename T>
 class value_guard {
 private:
-  detail::value_data<T> &data_;
+  detail::value_data<T>& data_;
 
   /// NOTE: Private constructor to prevent construction "in the wild".
-  value_guard(detail::value_data<T> &data)
+  value_guard(detail::value_data<T>& data)
     : data_{data} {
     // Lock value access as long as the guard lives.
     data_.mut.lock();
@@ -44,12 +44,12 @@ public:
   }
 
   /// Immutable value accessor.
-  const T &value() const {
+  const T& value() const {
     return data_.value;
   }
 
   /// Mutable value accessor.
-  T &value() {
+  T& value() {
     return data_.value;
   }
 };
