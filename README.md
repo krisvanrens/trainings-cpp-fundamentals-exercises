@@ -85,6 +85,9 @@ See source code directory [here](code/module_07/).
 - **Exercise 2**: Custom type trait
   - **2a**: [link](https://www.godbolt.org/z/dd8q86zMr)
   - **2b**: [link](https://www.godbolt.org/z/cfGfdjzrh)
+- **Exercise 3**: Generic wrapping mutex
+  - **3a**: [link](https://www.godbolt.org/z/c9hzxjxeY)
+  - **3b**: [link](https://www.godbolt.org/z/7rdY8GY4G)
 
 ## Module 08: The standard library
 
