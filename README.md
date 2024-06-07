@@ -8,7 +8,7 @@ Feel free to contact me/create a PR if there are any mistakes or points of impro
 ## Module 00: Introduction to C++
 
 - **Exercise 1**: Get a C++ development environment up and running (use the links in the resources).
-- **Exercise 2**: Explore the example code base ([link](https://github.com/krisvanrens/master-mind)).
+- **Exercise 2**: Explore the example code base ([link](https://github.com/krisvanrens/task-scheduler).
 
 ## Module 01: Variables and initialization
 
