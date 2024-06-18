@@ -23,7 +23,7 @@ See source code directory [here](code/module_01/).
 See source code directory [here](code/module_02/).
 
 - **Exercise 1**: Counting set bits ([link](https://www.godbolt.org/z/rM9oKrrWr))
-- **Exercise 2**: ROT13 encoding ([link](https://www.godbolt.org/z/es6W8Kxhn))
+- **Exercise 2**: ROT13 encoding ([link](https://www.godbolt.org/z/bvMvzcaPz))
 - **Exercise 3**: Finite state machine ([link](https://www.godbolt.org/z/aE93sh3cn))
 - **Exercise 4**: Game of the Goose ([link](https://www.godbolt.org/z/Y4GcPMecP))
 
