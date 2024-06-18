@@ -8,7 +8,7 @@ Feel free to contact me/create a PR if there are any mistakes or points of impro
 ## Module 00: Introduction to C++
 
 - **Exercise 1**: Get a C++ development environment up and running (use the links in the resources).
-- **Exercise 2**: Explore the example code base ([link](https://github.com/krisvanrens/task-scheduler).
+- **Exercise 2**: Explore the example code base ([link](https://github.com/krisvanrens/task-scheduler)).
 
 ## Module 01: Variables and initialization
 
@@ -22,7 +22,7 @@ See source code directory [here](code/module_01/).
 
 See source code directory [here](code/module_02/).
 
-- **Exercise 1**: Counting set bits ([link](https://www.godbolt.org/z/rM9oKrrWr))
+- **Exercise 1**: Counting set bits ([link](https://www.godbolt.org/z/Yj8M8W78o))
 - **Exercise 2**: ROT13 encoding ([link](https://www.godbolt.org/z/bvMvzcaPz))
 - **Exercise 3**: Finite state machine ([link](https://www.godbolt.org/z/aE93sh3cn))
 - **Exercise 4**: Game of the Goose ([link](https://www.godbolt.org/z/Y4GcPMecP))
