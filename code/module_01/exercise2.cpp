@@ -1,6 +1,8 @@
 // C++ Fundamentals: exercise mod01-ex2
 
 // Exercise: create a data structure that models Intel x86 64 bit CPU registers..
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 int main() {
   // Exercise: verify correct setting of values..
@@ -15,4 +17,4 @@ int main() {
   //   AH:                                                             1100'1101
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/x8vodadqb
+// Compiler Explorer: https://www.godbolt.org/z/cz8od4aqd

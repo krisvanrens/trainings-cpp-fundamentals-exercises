@@ -14,9 +14,9 @@ Feel free to contact me/create a PR if there are any mistakes or points of impro
 
 See source code directory [here](code/module_01/).
 
-- **Exercise 1**: Classical mechanics ([link](https://www.godbolt.org/z/PnazTcoYx))
-- **Exercise 2**: Intel x86 CPU registers ([link](https://www.godbolt.org/z/x8vodadqb))
-- **Exercise 3**: Progress bar ([link](https://www.godbolt.org/z/jMYPfT5T5))
+- **Exercise 1**: Classical mechanics ([link](https://www.godbolt.org/z/8dWEdoj13))
+- **Exercise 2**: Intel x86 CPU registers ([link](https://www.godbolt.org/z/cz8od4aqd))
+- **Exercise 3**: Progress bar ([link](https://www.godbolt.org/z/zP6b67vGe))
 
 ## Module 02: Control flow statements
 
@@ -101,8 +101,8 @@ See source code directory [here](code/module_08/).
 
 See source code directory [here](code/module_09/).
 
-- **Exercise 1**: Event log processing ([link](https://www.godbolt.org/z/G94Tv4jdT))
-- **Exercise 2**: Custom type iteration ([link](https://www.godbolt.org/z/14e61ozaa))
+- **Exercise 1**: Event log processing ([link](https://www.godbolt.org/z/jY3eETs3x))
+- **Exercise 2**: Custom type iteration ([link](https://www.godbolt.org/z/TsGGo1717))
 
 ## Module 10: Working with strings
 

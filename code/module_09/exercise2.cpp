@@ -16,6 +16,8 @@
 //            type and add the minimal mechanics required to have the example in function
 //            main work. Use the internet to find a resource that properly explains how
 //            to go about this. NOTE: Don't use std::iterator -- this was deprecated.
+//
+//           Difficulty rating for this exercise: ⭐⭐
 
 struct Pixel {
 public:
@@ -42,4 +44,4 @@ int main() {
   //   56
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/14e61ozaa
+// Compiler Explorer: https://www.godbolt.org/z/TsGGo1717

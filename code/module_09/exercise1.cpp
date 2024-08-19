@@ -42,43 +42,55 @@ std::ostream& operator<<(std::ostream& os, const Events& e) {
   return os;
 }
 
-// Exercise: A) Use function 'process_A' to hand-write an algorithm that in order:
-//                - Filters out the errors from the event log.
-//                - Filters out the sensor errors with 'id' greater than or equal to 5.
-//                - Removes events with duplicate messages.
+// Exercise: A) Use function 'process_A' to hand-write an algorithm that, in order:
+//                1. Filters out (i.e. extracts) errors from the event log.
+//                2. Filters out (i.e. extracts) sensor errors with 'id' >= 5.
+//                3. Removes events with duplicate messages.
 //              Use no standard library algorithms for implementation of this step.
+//
+//              Difficulty rating for this exercise step: ⭐⭐
 //
 //           B) Reimplement the algorithm of step A using "classic" (non-ranges) algo-
 //               rithms from the standard library. Aim for conciseness and readability.
 //
+//              Difficulty rating for this exercise step: ⭐⭐
+//
 //           C) Reimplement the algorithm of step B using "constrained" (range-based)
 //               algorithms from the standard library.
 //
+//              Difficulty rating for this exercise step: ⭐⭐
+//
 //           D) (BONUS!) Reimplement the algorithm of step C using the Ranges library,
-//               either from the C++20 standard library or using the Range-v3 library.
+//               either from the C++23 standard library or using the Range-v3 library.
+//
+//              Difficulty rating for this exercise step: ⭐⭐⭐
 
+// A) The hand-written approach:
 void process_A(const Events& events) {
   std::cout << std::source_location::current().function_name() << " result:\n";
 
-  // TODO..
+  // TODO
 }
 
+// B) The classic standard library algorithm approach:
 void process_B(const Events& events) {
   std::cout << std::source_location::current().function_name() << " result:\n";
 
-  // TODO..
+  // TODO
 }
 
+// C) The standard library "constrained" algorithm approach:
 void process_C(const Events& events) {
   std::cout << std::source_location::current().function_name() << " result:\n";
 
-  // TODO..
+  // TODO
 }
 
+// D) The ranges functional-style approach:
 void process_D(const Events& events) {
   std::cout << std::source_location::current().function_name() << " result:\n";
 
-  // TODO..
+  // TODO
 }
 
 int main() {
@@ -104,4 +116,4 @@ int main() {
   process_D(event_log);
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/G94Tv4jdT
+// Compiler Explorer: https://www.godbolt.org/z/jY3eETs3x
