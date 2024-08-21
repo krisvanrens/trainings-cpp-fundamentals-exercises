@@ -12,6 +12,8 @@
 }
 
 // Exercise: implement "Game of the Goose" for four players..
+//
+// Difficulty rating for this exercise: ⭐⭐⭐
 
 int main() {
   // Rule 1: Bridge: if position is 6, proceed to position 12 immediately.
@@ -36,4 +38,4 @@ int main() {
   // Extra rule IV: If the first throw is [6, 3]/[3, 6], immediately go to position 26.
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/Y4GcPMecP
+// Compiler Explorer: https://www.godbolt.org/z/7vjoEYnjM

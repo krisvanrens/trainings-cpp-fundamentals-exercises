@@ -11,9 +11,11 @@
 }
 
 // Exercise: implement a state machine..
+//
+// Difficulty rating for this exercise: ⭐
 
 int main() {
   // ...
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/aE93sh3cn
+// Compiler Explorer: https://www.godbolt.org/z/KecvnaPvG
