@@ -24,6 +24,8 @@
 //             api1(56);                        // Equal to 'api(17, 42, 56)'.
 //
 //           Implement this curried version of 'api' called 'api_curried'.
+//
+// Difficulty rating for this exercise: ⭐⭐⭐
 
 void api(int arg1, int arg2, int arg3) {
   std::cout << arg1 << ", " << arg2 << ", " << arg3 << '\n';
@@ -35,4 +37,4 @@ int main() {
   api(17, 42, 56);
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/8qWKEE6G6
+// Compiler Explorer: https://www.godbolt.org/z/bW15bTxsK

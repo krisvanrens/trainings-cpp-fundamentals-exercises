@@ -1,6 +1,7 @@
 // C++ Fundamentals: exercise mod03-ex1
 
 #include <cmath>
+#include <format>
 #include <iostream>
 
 const float gravity_constant{9.81f}; // In [meters/second^2].
@@ -14,6 +15,7 @@ const float gravity_constant{9.81f}; // In [meters/second^2].
 //
 // Using these functions, reimplement the equations from module 01: exercise 1.
 //
+// Difficulty rating for this exercise: ⭐
 
 // Reminders:
 //
@@ -29,12 +31,8 @@ int main() {
   const float anvil_weight_kg{226.0f};
   const float drop_height_m{58.0f};
 
-  std::cout << "Energy of the anvil at impact: "
-            /* << ... */
-            << " Watt-hour\n";
-  std::cout << "Speed of the anvil at impact: "
-            /* << ... */
-            << " Kilometers/hour\n";
+  std::cout << std::format("Energy of the anvil at impact: ... Watt-hour\n");
+  std::cout << std::format("Speed of the anvil at impact: ... Kilometers/hour\n");
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/nPhasraTc
+// Compiler Explorer: https://www.godbolt.org/z/bh9KWccPM

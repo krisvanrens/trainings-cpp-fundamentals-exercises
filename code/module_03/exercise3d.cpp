@@ -16,6 +16,8 @@
 // Exercise: replace the 'dispatch' function with a call to a dispatch map, containing a
 //            function object for each state value. Use the 'at' function of the map when
 //            calling the function object corresponding to a state.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 enum class State { Idle, Initialize, Receive, Done };
 
@@ -102,4 +104,4 @@ int main() {
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/bxM78Mx8n
+// Compiler Explorer: https://www.godbolt.org/z/h3h8bch5G

@@ -12,6 +12,8 @@
 }
 
 // Exercise: create one function for each state implementation (doing the printing 'work').
+//
+// Difficulty rating for this exercise: ⭐
 
 enum class State { Idle, Initialize, Receive, Done };
 
@@ -49,4 +51,4 @@ int main() {
   std::cout << "Done\n";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/5v5c4ncW3
+// Compiler Explorer: https://www.godbolt.org/z/eY6dP1qz1

@@ -15,6 +15,8 @@
 
 // Exercise: in the same vein as exercise 2d, we can replace the switch statement in the
 //            'state_machine' function with the use of an associative map.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 enum class State { Idle, Initialize, Receive, Done };
 
@@ -81,4 +83,4 @@ int main() {
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/7h9r1qWcc
+// Compiler Explorer: https://www.godbolt.org/z/qY4T7Mf6E

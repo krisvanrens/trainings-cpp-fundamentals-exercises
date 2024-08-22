@@ -14,6 +14,8 @@
 // Exercise: create a function 'state_machine' that holds the switch statement from the 'main'
 //            function. The idea is that after the refactoring, the while-loop in 'main' will
 //            call out to `state_machine` to determine the next state ('main' will be shorter).
+//
+// Difficulty rating for this exercise: ⭐
 
 enum class State { Idle, Initialize, Receive, Done };
 
@@ -67,4 +69,4 @@ int main() {
   state_done_impl();
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/YEMnr5Y3f
+// Compiler Explorer: https://www.godbolt.org/z/hW65acPEx

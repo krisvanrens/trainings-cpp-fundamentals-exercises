@@ -14,6 +14,8 @@
 // Exercise: split out the state machine mechanics (determining the next state) and the calling
 //            of the work functions depending on the state. Make a new function 'dispatch' that,
 //            depending on the given state, calls out to the work functions.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 enum class State { Idle, Initialize, Receive, Done };
 
@@ -75,4 +77,4 @@ int main() {
   state_done_impl();
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/3aW51ndET
+// Compiler Explorer: https://www.godbolt.org/z/WcT641397

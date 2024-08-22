@@ -31,15 +31,15 @@ See source code directory [here](code/module_02/).
 
 See source code directory [here](code/module_03/).
 
-- **Exercise 1**: Classical mechanics revisited ([link](https://www.godbolt.org/z/nPhasraTc))
-- **Exercise 2**: Evolution of a function ([link](https://www.godbolt.org/z/8Mr3afjG5))
+- **Exercise 1**: Classical mechanics revisited ([link](https://www.godbolt.org/z/bh9KWccPM))
+- **Exercise 2**: Evolution of a function ([link](https://www.godbolt.org/z/3P6Gqjecc))
 - **Exercise 3**: State machine revisited
-  - **3a**: [link](https://www.godbolt.org/z/5v5c4ncW3)
-  - **3b**: [link](https://www.godbolt.org/z/YEMnr5Y3f)
-  - **3c**: [link](https://www.godbolt.org/z/3aW51ndET)
-  - **3d**: [link](https://www.godbolt.org/z/bxM78Mx8n)
-  - **3e**: [link](https://www.godbolt.org/z/7h9r1qWcc)
-- **Exercise 4**: Currying ([link](https://www.godbolt.org/z/8qWKEE6G6))
+  - **3a**: [link](https://www.godbolt.org/z/eY6dP1qz1)
+  - **3b**: [link](https://www.godbolt.org/z/hW65acPEx)
+  - **3c**: [link](https://www.godbolt.org/z/WcT641397)
+  - **3d**: [link](https://www.godbolt.org/z/h3h8bch5G)
+  - **3e**: [link](https://www.godbolt.org/z/qY4T7Mf6E)
+- **Exercise 4**: Currying ([link](https://www.godbolt.org/z/bW15bTxsK))
 
 ## Module 04: Classes and inheritance
 

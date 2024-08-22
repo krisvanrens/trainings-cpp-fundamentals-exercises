@@ -9,6 +9,8 @@
 //            the 'Inputs' namespace. However the code is set up such that e.g. for the
 //            first version, v1, we can just call: 'validate_v1(data)' in 'main'. See the
 //            'main' function for the explanation/goal for each sub-exercise.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 struct DataV2 {
   unsigned long values;
@@ -131,4 +133,4 @@ int main() {
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/8Mr3afjG5
+// Compiler Explorer: https://www.godbolt.org/z/3P6Gqjecc
