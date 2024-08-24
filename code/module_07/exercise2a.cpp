@@ -4,6 +4,8 @@
 
 // Exercise: Implement the "positive case" of the custom type trait to validate that a
 //            given template type corresponds to type 'A'.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 template<typename Type>
 struct A {};
@@ -23,4 +25,4 @@ int main() {
   static_assert(/* Check: int      */); // FAIL
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/dd8q86zMr
+// Compiler Explorer: https://www.godbolt.org/z/Kcjcsn8Yv

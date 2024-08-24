@@ -6,6 +6,8 @@
 #include <thread>
 
 // Exercise: Add forwarding constructors and CTAD.
+//
+// Difficulty rating for this exercise: ⭐⭐⭐
 
 namespace detail {
 
@@ -101,4 +103,4 @@ int main() {
   x4.lock().value().tag = "Covfefe";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/GvjEzPsrx
+// Compiler Explorer: https://www.godbolt.org/z/h7n7qPGh1

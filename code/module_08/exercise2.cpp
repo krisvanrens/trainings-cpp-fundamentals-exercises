@@ -6,6 +6,8 @@
 #include <unordered_map>
 
 // Exercise: Print the 'GAMES' map contents. Try to find as many possible ways to do so!
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 enum class Game {
   CommanderKeen,
@@ -39,4 +41,4 @@ int main() {
   // TODO: Print all map contents..
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/xj8W7v8fY
+// Compiler Explorer: https://www.godbolt.org/z/Gn6efcPon

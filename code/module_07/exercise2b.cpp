@@ -4,6 +4,8 @@
 
 // Exercise: Building on the result of the previous exercise, add a convenience name for
 //            the compile-time boolean result of the type trait: 'is_typeA_v'.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 template<typename Type>
 struct A {};
@@ -25,4 +27,4 @@ int main() {
   static_assert(is_typeA_v<int>);      // FAIL
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/cfGfdjzrh
+// Compiler Explorer: https://www.godbolt.org/z/qfProadsb

@@ -14,6 +14,8 @@
 //            A) The provided string must be between 8 and 24 characters long.
 //            B) The provided string must not contain any spaces.
 //            C) The provided string must not end with ".ro".
+//
+// Difficulty rating for this exercise: ⭐
 
 // TODO: Implement 'validate'..
 
@@ -62,4 +64,4 @@ TEST_SUITE("Module 10 - Working with strings") {
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/69fG91haz
+// Compiler Explorer: https://www.godbolt.org/z/35fa1bqYh

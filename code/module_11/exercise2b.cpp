@@ -16,6 +16,8 @@
 //
 //           Bonus question: Why implement memoization in a wrapping callable type? Can
 //                            you think of some pros/cons w.r.t. the wrapping function?
+//
+// Difficulty rating for this exercise: ⭐⭐⭐
 
 constexpr unsigned int NUMBER_OF_INPUT_VALUES = 100;
 
@@ -94,4 +96,4 @@ int main() {
   test(func_memoized, "Memoized function");
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/1hPqoTW3z
+// Compiler Explorer: https://www.godbolt.org/z/qYdMxKGe6

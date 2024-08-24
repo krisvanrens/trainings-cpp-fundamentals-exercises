@@ -6,6 +6,8 @@
 //            making subsequent calls fail.
 //
 //           You are free to use any error handling mechanism you see fit.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 const bool ERROR_INIT = false;
 const bool ERROR_RUN  = false;
@@ -34,4 +36,4 @@ int main() {
   s.run();
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/sqErKd4aT
+// Compiler Explorer: https://www.godbolt.org/z/8dP8TcKo8

@@ -62,40 +62,40 @@ See source code directory [here](code/module_04/).
 
 See source code directory [here](code/module_05/).
 
-- **Exercise 1**: Move-and-swap ([link](https://www.godbolt.org/z/aq7anGfM7))
-- **Exercise 2**: Lookup table
-  - **2a**: [link](https://www.godbolt.org/z/M9Kv8f8zx)
-  - **2b**: [link](https://www.godbolt.org/z/hbTezY4nK)
-  - **2c**: [link](https://www.godbolt.org/z/ccfsP78oY)
+- **Exercise 1**: Lookup table
+  - **2a**: [link](https://www.godbolt.org/z/4q8cj8Pfq)
+  - **2b**: [link](https://www.godbolt.org/z/P4hnsboTY)
+  - **2c**: [link](https://www.godbolt.org/z/nGb9b1zx6)
+- **Exercise 2**: Move-and-swap ([link](https://www.godbolt.org/z/o858ca6zv))
 
 ## Module 06: Error handling
 
 See source code directory [here](code/module_06/).
 
 - **Exercise 1**: Propagating errors
-  - **1a**: [link](https://www.godbolt.org/z/6Mjq1PW5a)
-  - **1b**: [link](https://www.godbolt.org/z/edcManKh1)
-- **Exercise 2**: Class setup ([link](https://www.godbolt.org/z/sqErKd4aT))
+  - **1a**: [link](https://www.godbolt.org/z/WfE5GnxdE)
+  - **1b**: [link](https://www.godbolt.org/z/Yfxbns9E7)
+- **Exercise 2**: Class setup ([link](https://www.godbolt.org/z/8dP8TcKo8))
 
 ## Module 07: Generic programming and templates
 
 See source code directory [here](code/module_07/).
 
-- **Exercise 1**: Rational number ([link](https://www.godbolt.org/z/jE4j4nes7))
+- **Exercise 1**: Rational number ([link](https://www.godbolt.org/z/EM6Kn7hdb))
 - **Exercise 2**: Custom type trait
-  - **2a**: [link](https://www.godbolt.org/z/dd8q86zMr)
-  - **2b**: [link](https://www.godbolt.org/z/cfGfdjzrh)
+  - **2a**: [link](https://www.godbolt.org/z/Kcjcsn8Yv)
+  - **2b**: [link](https://www.godbolt.org/z/qfProadsb)
 - **Exercise 3**: Generic wrapping mutex
-  - **3a**: [link](https://www.godbolt.org/z/19feG9f9r)
-  - **3b**: [link](https://www.godbolt.org/z/GvjEzPsrx)
+  - **3a**: [link](https://www.godbolt.org/z/adK69sYEz)
+  - **3b**: [link](https://www.godbolt.org/z/h7n7qPGh1)
 
 ## Module 08: The standard library
 
 See source code directory [here](code/module_08/).
 
-- **Exercise 1**: Classification `set` ordering ([link](https://www.godbolt.org/z/89Tf9KK5v))
-- **Exercise 2**: Iterating a `map` ([link](https://www.godbolt.org/z/xj8W7v8fY))
-- **Exercise 3**: Generating random values ([link](https://www.godbolt.org/z/KKbGn3bKh))
+- **Exercise 1**: Classification `set` ordering ([link](https://www.godbolt.org/z/T6bdarPEq))
+- **Exercise 2**: Iterating a `map` ([link](https://www.godbolt.org/z/Gn6efcPon))
+- **Exercise 3**: Generating random values ([link](https://www.godbolt.org/z/WEcGcKTT5))
 
 ## Module 09: Algorithms and iterators
 
@@ -108,14 +108,15 @@ See source code directory [here](code/module_09/).
 
 See source code directory [here](code/module_10/).
 
-- **Exercise 1**: String validation ([link](https://www.godbolt.org/z/69fG91haz))
+- **Exercise 1**: String validation ([link](https://www.godbolt.org/z/35fa1bqYh))
 
 ## Module 11: Operators and operator overloading
 
 See source code directory [here](code/module_11/).
 
-- **Exercise 1**: Extending `Fraction` with operators ([link](https://www.godbolt.org/z/19xqWjGjs))
+- **Exercise 1**: Extending `Fraction` with operators ([link](https://www.godbolt.org/z/Ejxf1dacW))
 - **Exercise 2**: Memoization
-  - **2a**: [link](https://www.godbolt.org/z/3GaearjYY)
-  - **2b**: [link](https://www.godbolt.org/z/1hPqoTW3z)
-- **Exercise 3**: Extending `Mutex` with operators ([link](https://www.godbolt.org/z/hvesKnTf4))
+  - **2a**: [link](https://www.godbolt.org/z/xsnfvrn5G)
+  - **2b**: [link](https://www.godbolt.org/z/qYdMxKGe6)
+- **Exercise 3**: Extending `Mutex` with operators ([link](https://www.godbolt.org/z/fdhP477rY))
+

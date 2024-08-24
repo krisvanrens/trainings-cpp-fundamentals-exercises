@@ -12,6 +12,7 @@
 //   B) Pointer-dereference to get directory to wrapped value member:
 //       `x->member` as an alternative to `x.value().member`.
 //
+// Difficulty rating for this exercise: ⭐⭐⭐
 
 namespace detail {
 
@@ -134,4 +135,5 @@ int main() {
   x4.lock()->tag        = "Covfefe";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/hvesKnTf4
+
+// Compiler Explorer: https://www.godbolt.org/z/fdhP477rY

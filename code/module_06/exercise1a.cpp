@@ -13,6 +13,8 @@
 //            pagated to the end user and can be handled. You are allowed to use any
 //            mechanism native to C++ (e.g. error codes, fundamental types, exceptions,
 //            etc.).
+//
+// Difficulty rating for this exercise: ⭐
 
 // Global error configuration: set to generate an error on a deep level.
 const bool ERROR = true;
@@ -72,4 +74,4 @@ int main() {
   s.report();
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/6Mjq1PW5a
+// Compiler Explorer: https://www.godbolt.org/z/WfE5GnxdE

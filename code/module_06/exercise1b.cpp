@@ -2,15 +2,12 @@
 
 #include <format>
 #include <iostream>
-#include <tl/expected.hpp>
 
-// Exercise: Implement error handling and propagation using the 'tl::expected' type.
-//           This type is a preview of the C++23-accepted type 'std::expected' im-
-//            plemented for C++11/14/17. It is a header-only library, meaning the only
-//            thing that one requires to do is include the library header, that's it.
+// Exercise: Implement error handling and propagation using C++23 'std::expected'.
 //
-//           Read about 'tl::expected' here:  https://github.com/TartanLlama/expected
 //           Read about 'std::expected' here: https://en.cppreference.com/w/cpp/utility/expected
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 // Global error configuration: set to generate an error on a deep level.
 const bool ERROR = true;
@@ -70,4 +67,4 @@ int main() {
   s.report();
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/edcManKh1
+// Compiler Explorer: https://www.godbolt.org/z/Yfxbns9E7

@@ -17,6 +17,8 @@
 //           Now, change the visibility of the 'object.zwuxl' classification to 'Hidden'.
 //           What changes? Is the set ordering and command-line output still correct?
 //           Make the set ordering use lexigraphical ordering again.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 class Classification {
 private:
@@ -51,4 +53,4 @@ int main() {
   }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/89Tf9KK5v
+// Compiler Explorer: https://www.godbolt.org/z/T6bdarPEq

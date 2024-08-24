@@ -19,6 +19,8 @@
 //           I) Division by another Fraction value.
 //           J) Output stream operator '<<' to print a Fraction value.
 //           K) (BONUS) {fmt} library formatter output support.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 //
 // Type traits
@@ -44,7 +46,6 @@ inline constexpr bool is_narrowing_conversion_v = is_narrowing_conversion<From, 
 // Concepts
 //
 
-
 template<typename Type>
 concept nonbool_integral = std::integral<Type> && !std::same_as<bool, Type>;
 
@@ -53,7 +54,6 @@ concept safely_convertible_to = !is_narrowing_conversion_v<From, To>;
 
 template<typename Op, typename Arg>
 concept binary_op = std::invocable<Op, Arg, Arg>;
-
 
 //
 // Fraction
@@ -124,4 +124,4 @@ int main() {
   assert(f1.denominator() == 7);
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/19xqWjGjs
+// Compiler Explorer: https://www.godbolt.org/z/Ejxf1dacW

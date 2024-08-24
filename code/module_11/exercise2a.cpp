@@ -22,6 +22,8 @@
 //           The exercise setup code provides a set of test data and simple benchmark.
 //           Implement a function named 'func_memoized' that wraps 'func' using the prin-
 //           ciples of memoization described above.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 constexpr unsigned int NUMBER_OF_INPUT_VALUES = 100;
 
@@ -98,4 +100,4 @@ int main() {
   test(func_memoized, "Memoized function");
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/3GaearjYY
+// Compiler Explorer: https://www.godbolt.org/z/xsnfvrn5G

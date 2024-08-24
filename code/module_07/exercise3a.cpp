@@ -6,6 +6,8 @@
 #include <thread>
 
 // Exercise: Make the `Mutex` abstraction type-generic.
+//
+// Difficulty rating for this exercise: ⭐⭐⭐
 
 namespace detail {
 
@@ -91,4 +93,4 @@ int main() {
   x3.lock().value().tag = "Covfefe";
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/19feG9f9r
+// Compiler Explorer: https://www.godbolt.org/z/adK69sYEz

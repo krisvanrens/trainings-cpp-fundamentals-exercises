@@ -10,8 +10,10 @@
 //           B) Build a signed integer histogram of one million samples from the random
 //               distribution setup in the previous step.
 //           C) Plot the histogram using the standard output.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
 int main() {
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/KKbGn3bKh
+// Compiler Explorer: https://www.godbolt.org/z/WEcGcKTT5
