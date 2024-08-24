@@ -44,7 +44,6 @@ inline constexpr bool is_narrowing_conversion_v = is_narrowing_conversion<From, 
 // Concepts
 //
 
-// clang-format off
 
 template<typename Type>
 concept nonbool_integral = std::integral<Type> && !std::same_as<bool, Type>;
@@ -55,7 +54,6 @@ concept safely_convertible_to = !is_narrowing_conversion_v<From, To>;
 template<typename Op, typename Arg>
 concept binary_op = std::invocable<Op, Arg, Arg>;
 
-// clang-format on
 
 //
 // Fraction

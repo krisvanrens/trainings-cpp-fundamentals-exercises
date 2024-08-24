@@ -1,58 +1,118 @@
 // C++ Fundamentals: exercise mod04-ex6
 
-#include <array>
-#include <cstddef>
+#include <cassert>
+#include <iostream>
+#include <stdexcept>
+#include <utility>
 
-// Exercise: Read the documentation for the 'find_coefficient' function API, find the flaws and
-//            improve it. Consider all angles relevant for caller and callee.
+// Exercise: Imagine a class type 'CharDevice' that manages a system device as
+//            an internal resource. This class 'CharDevice' will "open" the re-
+//            source when 'init' is called on it, and will "close" it at des-
+//            truction time. A function called 'valid' can be used to test state.
+//
+//           Implement the copy constructor and copy assignment operator such
+//            that the code in 'main' builds and the assertions pass. Use the
+//            copy-and-swap idiom. Note: use the 'clone' function to copy the
+//            device resource.
+//
+// Difficulty rating for this exercise: ⭐⭐
 
-// Implementation details -- don't touch.
-namespace Lut {
+// Helpers to fake a "system device" infrastructure.
+namespace System {
 
-static constexpr std::size_t SIZE = 1024u;
+struct Device {
+  int handle{-1};
+  int offset{-1};
 
-struct Element {};
+  Device() = default;
 
-using Size = std::size_t;
-using Lut  = std::array<Element, SIZE>;
+  Device(Device&&)            = default;
+  Device& operator=(Device&&) = default;
 
-} // namespace Lut
+  [[nodiscard]] Device clone() const {
+    return *this;
+  }
 
-///
-/// Find the coefficient given the LUT offset and memory range.
-///
-/// \param c              The resulting coefficient.
-/// \param lut_offset_el  The element in the LUT where the memory range offset starts.
-/// \param lut_range_size The LUT memory range size.
-/// \param begin_incl     Whether or not the begin element of the memory range must be included.
-/// \param end_incl       Whether or not the end element of the memory range must be included.
-/// \param correct_tco    Whether or not to correct for transfer call oscillation.
-/// \param normalization  Indicates if normalization must be applied (default: on).
-///
-void find_coefficient(double&             c,
-                      const Lut::Element& lut_offset_el,
-                      const Lut::Size     lut_range_size,
-                      bool                begin_incl,
-                      bool                end_incl,
-                      bool                correct_tco,
-                      bool                normalization = true) {
-  // ..uninteresting implementation..
+  [[nodiscard]] bool operator==(const Device&) const = default;
+
+private:
+  Device(const Device&)            = default;
+  Device& operator=(const Device&) = default;
+};
+
+[[nodiscard]] static bool open_device(Device& device) {
+  device.handle = 10;
+  device.offset = 123;
+  return true;
 }
+
+[[nodiscard]] static bool close_device(Device& device) {
+  device.handle = -1;
+  device.offset = -1;
+  return true;
+}
+
+[[nodiscard]] static bool is_device_open(const Device& device) {
+  return (device != Device{});
+}
+
+} // namespace System
+
+class CharDevice {
+public:
+  CharDevice() = default;
+
+  void init() {
+    if (!open_device(device_)) {
+      throw std::runtime_error{"Failed to open device"};
+    }
+  }
+
+  ~CharDevice() {
+    if (!close_device(device_)) {
+      std::cerr << "Failed to close device\n";
+    }
+  }
+
+  // TODO: Copy constructor..
+  // TODO: Copy assignment operator..
+
+  [[nodiscard]] bool valid() const {
+    return is_device_open(device_);
+  }
+
+private:
+  System::Device device_;
+};
 
 int main() {
-  const Lut::Lut lut;
+  try {
+    // Default construction:
+    CharDevice x;
 
-  double          c1{}, c2{}, c3{};
-  const auto&     offset_el1  = lut[50];
-  const auto&     offset_el2  = lut[20];
-  const auto&     offset_el3  = lut[80];
-  const Lut::Size range1_size = 16;
-  const Lut::Size range2_size = 4;
-  const Lut::Size range3_size = 12;
+    assert(!x.valid());
 
-  find_coefficient(c1, offset_el1, range1_size, true, true, false);
-  find_coefficient(c2, offset_el2, range2_size, true, false, false, false);
-  find_coefficient(c3, offset_el2, range3_size, false, false, true);
+    x.init();
+
+    assert(x.valid());
+
+    // Copy construction:
+    CharDevice y{x};
+
+    assert(x.valid());
+    assert(y.valid());
+
+    // Copy assignment:
+    CharDevice z;
+    z = x;
+
+    assert(x.valid());
+    assert(y.valid());
+    assert(z.valid());
+
+  } catch (const std::exception& error) {
+    std::cerr << "Error: " << error.what() << '\n';
+  }
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/3YMvTW1b1
+// Compiler Explorer: https://www.godbolt.org/z/G7xnv18Yd

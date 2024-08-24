@@ -10,6 +10,8 @@
 //           The employee type should have a member function 'print' that prints the
 //            employee information including role and functions. The mappings of each
 //            employee/role/function is given in 'main'.
+//
+// Difficulty rating for this exercise: ⭐
 
 // Organization role; e.g. 'developer', 'manager', etc.
 class Role {
@@ -73,4 +75,4 @@ int main() {
   c.print();
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/cvT71G3hc
+// Compiler Explorer: https://www.godbolt.org/z/s938Pdr95

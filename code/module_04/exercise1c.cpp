@@ -1,4 +1,4 @@
-// C++ Fundamentals: exercise mod04-ex1b
+// C++ Fundamentals: exercise mod04-ex1c
 
 #include <cassert>
 #include <format>
@@ -8,12 +8,13 @@
 #define LOG std::cout << __PRETTY_FUNCTION__ << '\n';
 #define RET return *this;
 
-// Exercise: Add a boolean field 'original' (plus getter) to the 'Base' class.
-//           This field indicates whether or not the class instantiation in
-//            question is an "original" (i.e. not copied). Make sure the field
-//            value is set correctly (validate using the assertions in 'main').
+// Exercise: Move the member variable 'original_', and the corresponding getter
+//            member function from class 'Base' to 'Derived'. The end result
+//            output should be the same as for the previous exercise. In the
+//            implementation of the member functions for the derived class,
+//            call the base class implementations instead of reimplementing it.
 //
-// Difficulty rating for this exercise: ⭐
+// Difficulty rating for this exercise: ⭐⭐
 
 struct Noisy {
   Noisy()                        { LOG }     // Default constructor.
@@ -31,11 +32,13 @@ public:
   }
 
   Base(const Base& other)
-    : id_{other.id_ + 1} {
+    : id_{other.id_ + 1}
+    , original_{false} {
   }
 
   Base& operator=(const Base& other) {
-    id_ = other.id_ + 1;
+    id_       = other.id_ + 1;
+    original_ = false;
     return *this;
   }
 
@@ -43,8 +46,13 @@ public:
     return id_;
   }
 
+  [[nodiscard]] bool original() const {
+    return original_;
+  }
+
 private:
-  int id_{-1};
+  int  id_{-1};
+  bool original_{true};
 };
 
 class Derived : public Base {
@@ -65,7 +73,9 @@ int main() {
   Derived d4;      // Calls default constructor.
   d4 = d2;         // Calls copy assignment operator.
 
-  const auto print = [](const Derived& d) { std::cout << std::format("Derived ID: {}\n", d.id()); };
+  const auto print = [](const Derived& d) {
+    std::cout << std::format("Derived ID: {} (original? {})\n", d.id(), d.original() ? "yes" : "no");
+  };
 
   print(d1);
   print(d2);
@@ -73,7 +83,7 @@ int main() {
   print(d4);
 
   // The following assertions can be enabled to test the end result:
-#if 0
+#if 1
   assert(d1.id() == 5);
   assert(d2.id() == 6);
   assert(d3.id() == 7);
@@ -85,4 +95,4 @@ int main() {
 #endif
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/qozhPMMzn
+// Compiler Explorer: https://www.godbolt.org/z/YdEnrqWdb

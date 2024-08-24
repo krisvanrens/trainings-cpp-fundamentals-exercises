@@ -25,13 +25,11 @@ struct DataV3 {
 
 namespace Inputs {
 
-// clang-format off
 namespace v1 { const unsigned long data{7815349426721095};        }
 namespace v2 { const DataV2        data{7815349426721095, 37311}; }
 namespace v3 {       DataV3        data{7815349426721095, 37311}; }
 namespace v4 { const DataV2        data{7815349426721095, 37311}; }
 namespace v5 { const DataV2        data{7815349426721095, 37311}; }
-// clang-format on
 
 } // namespace Inputs
 

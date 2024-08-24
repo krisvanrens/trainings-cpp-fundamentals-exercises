@@ -5,6 +5,8 @@
 #include <thread>
 
 // Exercise: Implement the `Mutex` abstraction. Read the instructions in the slides.
+//
+// Difficulty rating for this exercise: ⭐⭐⭐
 
 /// Safe value abstraction.
 class Mutex {
@@ -36,4 +38,4 @@ int main() {
   std::cout << c.lock().value() << '\n'; // One million...for sure!
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/hcc3ovWsj
+// Compiler Explorer: https://www.godbolt.org/z/qb7frPjMW

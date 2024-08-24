@@ -45,18 +45,18 @@ See source code directory [here](code/module_03/).
 
 See source code directory [here](code/module_04/).
 
-- **Exercise 1**: State machine revisited
-  - **1a**: [link](https://www.godbolt.org/z/T59G7nTjz)
-  - **1b**: [link](https://www.godbolt.org/z/TEGhsYqe9)
-- **Exercise 2**: Relation consternation ([link](https://www.godbolt.org/z/cvT71G3hc))
-- **Exercise 3**: Special member functions
-  - **3a**: [link](https://www.godbolt.org/z/W55xPbGW3)
-  - **3b**: [link](https://www.godbolt.org/z/5Ynza4zeM)
-  - **3c**: [link](https://www.godbolt.org/z/WsjT6Tfna)
-- **Exercise 4**: Copy-and-swap ([link](https://www.godbolt.org/z/GK61rExPc))
-- **Exercise 5**: Life-cycle management ([link](https://www.godbolt.org/z/1dP5chKvM))
-- **Exercise 6**: Atrocious API ([link](https://www.godbolt.org/z/3YMvTW1b1))
-- **Exercise 7**: Wrapping mutex ([link](https://www.godbolt.org/z/hcc3ovWsj))
+- **Exercise 1**: Special member functions
+  - **1a**: [link](https://www.godbolt.org/z/YxfcPGx38)
+  - **1b**: [link](https://www.godbolt.org/z/qozhPMMzn)
+  - **1c**: [link](https://www.godbolt.org/z/YdEnrqWdb)
+- **Exercise 2**: Relation consternation ([link](https://www.godbolt.org/z/s938Pdr95))
+- **Exercise 3**: State machine revisited
+  - **3a**: [link](https://www.godbolt.org/z/xrcbGToMe)
+  - **3b**: [link](https://www.godbolt.org/z/Gj6cYo66e)
+- **Exercise 4**: Life-cycle management ([link](https://www.godbolt.org/z/Ej4sf85q3))
+- **Exercise 5**: Atrocious API ([link](https://www.godbolt.org/z/d3fPYda4c))
+- **Exercise 6**: Copy-and-swap ([link](https://www.godbolt.org/z/G7xnv18Yd))
+- **Exercise 7**: Wrapping mutex ([link](https://www.godbolt.org/z/qb7frPjMW))
 
 ## Module 05: Memory
 
@@ -81,7 +81,7 @@ See source code directory [here](code/module_06/).
 
 See source code directory [here](code/module_07/).
 
-- **Exercise 1**: Rational number ([link](https://www.godbolt.org/z/hh9GcYjfj))
+- **Exercise 1**: Rational number ([link](https://www.godbolt.org/z/jE4j4nes7))
 - **Exercise 2**: Custom type trait
   - **2a**: [link](https://www.godbolt.org/z/dd8q86zMr)
   - **2b**: [link](https://www.godbolt.org/z/cfGfdjzrh)

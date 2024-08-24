@@ -1,88 +1,83 @@
 // C++ Fundamentals: exercise mod04-ex3b
 
-#include <cassert>
-#include <format>
+#include <functional>
 #include <iostream>
+#include <map>
+#include <random>
 
-// Macro definitions (text replacements) used in the 'Noisy' type.
-#define LOG std::cout << __PRETTY_FUNCTION__ << '\n';
-#define RET return *this;
+// Generates a pseudo-random boolean value to indicate if the state machine may advance.
+[[nodiscard]] bool advance() {
+  static std::random_device              rd;
+  static std::mt19937                    generator(rd());
+  static std::uniform_int_distribution<> dist(1, 2);
+  return (dist(generator) == 2);
+}
 
-// Exercise: Add a boolean field 'original' (plus getter) to the 'Base' class.
-//           This field indicates whether or not the class instantiation in
-//            question is an "original" (i.e. not copied). Make sure the field
-//            value is set correctly (validate using the assertions in 'main').
+// Exercise: 1) Add a class member variable 'id' of type 'unsigned long' to StateMachine.
+//           2) The constructor should take an argument that initializes this ID field.
+//           3) Extend each message printing statement with the class ID value.
+//           4) The function 'state_machine' does not use any class member variables. How
+//              can we express in C++ that it is independent of a class instance?
+//              Bonus question: can we apply the same to the dispatch map? Why? Or why not?
+//
+// Difficulty rating for this exercise: ⭐⭐
 
-struct Noisy {
-  // clang-format off
-  Noisy()                        { LOG }     // Default constructor.
-  ~Noisy()                       { LOG }     // Destructor.
-  Noisy(const Noisy&)            { LOG }     // Copy constructor.
-  Noisy& operator=(const Noisy&) { LOG RET } // Copy assignment operator.
-  Noisy(Noisy&&)                 { LOG }     // Move constructor.
-  Noisy& operator=(Noisy&&)      { LOG RET } // Move assignment operator.
-  // clang-format on
-};
-
-class Base {
+class StateMachine {
 public:
-  Base(int id)
-    : id_{id} {
-  }
-
-  Base(const Base& other)
-    : id_{other.id_ + 1} {
-  }
-
-  Base& operator=(const Base& other) {
-    id_ = other.id_ + 1;
-    return *this;
-  }
-
-  [[nodiscard]] int id() const {
-    return id_;
+  StateMachine() {
+    while (state_now_ != State::Done) {
+      state_now_  = state_next_;
+      state_next_ = state_machine(state_now_);
+      dispatch_map.at(state_now_)();
+    }
   }
 
 private:
-  int id_{-1};
-};
+  enum class State { Idle, Initialize, Receive, Done };
 
-class Derived : public Base {
-public:
-  Derived()
-    : Base{-1} {
+  void state_idle_impl() {
+    std::cout << "Idle\n";
   }
 
-  Derived(int id)
-    : Base{id} {
+  void state_init_impl() {
+    std::cout << "Initialize\n";
   }
+
+  void state_recv_impl() {
+    std::cout << "Receive\n";
+  }
+
+  void state_done_impl() {
+    std::cout << "Done\n";
+  }
+
+  State state_machine(State s) {
+    const std::map<State, State> next_state{
+      {State::Idle,       State::Initialize},
+      {State::Initialize, State::Receive},
+      {State::Receive,    State::Done},
+      {State::Done,       State::Done}};
+
+    if (advance()) {
+      return next_state.at(s);
+    }
+
+    return s;
+  }
+
+  State state_now_{State::Idle};
+  State state_next_{State::Idle};
+
+  const std::map<State, std::function<void()>> dispatch_map{
+    {State::Idle,       std::bind_front(&StateMachine::state_idle_impl, this)},
+    {State::Initialize, std::bind_front(&StateMachine::state_init_impl, this)},
+    {State::Receive,    std::bind_front(&StateMachine::state_recv_impl, this)},
+    {State::Done,       std::bind_front(&StateMachine::state_done_impl, this)}};
 };
 
 int main() {
-  Derived d1{5};   // Calls single-argument constructor.
-  Derived d2{d1};  // Calls copy constructor.
-  Derived d3 = d2; // Calls copy constructor.
-  Derived d4;      // Calls default constructor.
-  d4 = d2;         // Calls copy assignment operator.
-
-  const auto print = [](const Derived& d) { std::cout << std::format("Derived ID: {}\n", d.id()); };
-
-  print(d1);
-  print(d2);
-  print(d3);
-  print(d4);
-
-  // The following assertions can be enabled to test the end result:
-#if 0
-  assert(d1.id() == 5);
-  assert(d2.id() == 6);
-  assert(d3.id() == 7);
-  assert(d4.id() == 7);
-  assert(d1.original() == true);
-  assert(d2.original() == false);
-  assert(d3.original() == false);
-  assert(d4.original() == false);
-#endif
+  // StateMachine s1{1};
+  // StateMachine s2{2};
 }
 
-// Compiler Explorer: https://www.godbolt.org/z/5Ynza4zeM
+// Compiler Explorer: https://www.godbolt.org/z/Gj6cYo66e

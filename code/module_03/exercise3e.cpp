@@ -36,13 +36,11 @@ void state_done_impl() {
   std::cout << "Done\n";
 }
 
-// clang-format off
 const std::map<State, std::function<void()>> dispatch_map{
   {State::Idle,       &state_idle_impl},
   {State::Initialize, &state_init_impl},
   {State::Receive,    &state_recv_impl},
   {State::Done,       &state_done_impl}};
-// clang-format on
 
 State state_machine(State s) {
   switch (s) {
